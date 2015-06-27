@@ -1,4 +1,4 @@
-# Reports
+# Examples
 
 ### 2015-06-15 Xcode Analyzer Bug
 
