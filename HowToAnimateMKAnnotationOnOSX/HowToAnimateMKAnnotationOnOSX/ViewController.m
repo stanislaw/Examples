@@ -25,8 +25,8 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)viewDidAppear {
+    [super viewDidAppear];
 
     self.mapView.delegate = self;
 
@@ -40,11 +40,12 @@
     self.mapView.centerCoordinate = NYC;
 
     [NSAnimationContext runAnimationGroup:^(NSAnimationContext *context) {
-        context.duration = 10;
+        context.duration = 2;
+        context.allowsImplicitAnimation = YES;
 
         annotation.coordinate = destination;
     } completionHandler:^{
-        NSLog(@"Animation complete");
+        NSLog(@"Animation complete.");
     }];
 }
 
