@@ -1,5 +1,11 @@
 # Examples
 
+### 2014-01-14 How to adjust region to fit custom annotation callout that have just appeared?
+
+[Demo project](https://github.com/stanislaw/Examples/tree/20140114-adjust-region-to-fit-annotation-callout)
+
+[StackOverflow: How to adjust region to fit custom annotation callout that have just appeared?](http://stackoverflow.com/questions/13095911/how-to-adjust-region-to-fit-custom-annotation-callout-that-have-just-appeared/14270981#comment30872135_14270981)
+
 ### 2015-06-15 Xcode Analyzer Bug
 
 Xcode Analyzer produces wrong warning: "Function call argument is an uninitialized value" 
