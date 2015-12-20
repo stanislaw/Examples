@@ -20,4 +20,12 @@ Xcode Analyzer produces wrong warning: "Function call argument is an uninitializ
 
 [StackOverflow: How to animate coordinate property of MKAnnotation-based annotation on OSX?](http://stackoverflow.com/questions/31089430/how-to-animate-coordinate-property-of-mkannotation-based-annotation-on-osx)
 
+### 2015-12-20 Raw Terminal: weird behavior of Left Arrow key
+
+[Demo project](https://github.com/stanislaw/Examples/tree/20151220-raw-terminal)
+
+[StackOverflow: Terminfo: left arrow is mapped to backspace code (8) on default OSX terminal. Why is it so? And how to change it?](http://stackoverflow.com/questions/34319160/terminfo-left-arrow-is-mapped-to-backspace-code-8-on-default-osx-terminal-wh)
+
+
+
 
