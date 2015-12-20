@@ -1,23 +1,51 @@
-# Examples
+# Example
 
-### 2014-01-14 How to adjust region to fit custom annotation callout that have just appeared?
+[Terminfo: left arrow is mapped to backspace code (8) on default OSX terminal. Why is it so? And how to change it?](http://stackoverflow.com/questions/34319160/terminfo-left-arrow-is-mapped-to-backspace-code-8-on-default-osx-terminal-wh)
 
-[Demo project](https://github.com/stanislaw/Examples/tree/20140114-adjust-region-to-fit-annotation-callout)
+- Start Raw Terminal (Xcode project in this branch)
+- send "c" key two times
+- send left arrow key two times
+- send "d" two times
+- send enter
 
-[StackOverflow: How to adjust region to fit custom annotation callout that have just appeared?](http://stackoverflow.com/questions/13095911/how-to-adjust-region-to-fit-custom-annotation-callout-that-have-just-appeared/14270981#comment30872135_14270981)
+```objective-c
+Terminal *terminal = [Terminal new];
 
-### 2015-06-15 Xcode Analyzer Bug
+[terminal start];
 
-Xcode Analyzer produces wrong warning: "Function call argument is an uninitialized value" 
+sleep(1); // for terminal to read prompt
 
-[Demo project](https://github.com/stanislaw/Reports/tree/20150615-xcode-analyzer-bug)
+NSString *string1_twoLettersCC = @"cc";
+NSString *string2_leftArrow_2x = @"\033[D\033[D";
+NSString *string3_twoLettersDD = @"dd";
+NSString *string4_LF           = @"\n";
 
-[rdar://21383256](http://www.openradar.appspot.com/21383256)
+NSData *data;
 
-### 2015-06-27 How to animate MKAnnotation on OSX? (Problem solved)
+data = [string1_twoLettersCC dataUsingEncoding:NSUTF8StringEncoding];
+[terminal sendData:data];
 
-[Demo project](https://github.com/stanislaw/Examples/tree/20150627-osx-animate-mkannotation)
+data = [string2_leftArrow_2x dataUsingEncoding:NSUTF8StringEncoding];
+[terminal sendData:data];
 
-[StackOverflow: How to animate coordinate property of MKAnnotation-based annotation on OSX?](http://stackoverflow.com/questions/31089430/how-to-animate-coordinate-property-of-mkannotation-based-annotation-on-osx)
+data = [string3_twoLettersDD dataUsingEncoding:NSUTF8StringEncoding];
+[terminal sendData:data];
+
+data = [string4_LF dataUsingEncoding:NSUTF8StringEncoding];
+[terminal sendData:data];
+
+[[NSRunLoop currentRunLoop] run];
+```
+
+Bash maintains state correctly but codes that it returns for the above sequence of keys is quite confusing.
+
+Output:
+
+```
+Inspecting data (length: 10) :b a s h - 3 . 2 $   
+Inspecting data (length: 16) :c c 8 8 d c c 8 8 d c c 8 8 13 10 
+Inspecting data (length: 31) :b a s h :   d d c c :   c o m m a n d   n o t   f o u n d 13 10 
+Inspecting data (length: 10) :b a s h - 3 . 2 $   
+```
 
 
