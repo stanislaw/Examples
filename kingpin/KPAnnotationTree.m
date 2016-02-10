@@ -48,9 +48,37 @@
     _annotations = nil;
 }
 
-#pragma mark - Search
-
 - (NSArray *)annotationsInMapRect:(MKMapRect)rect {
+    double rectMaxX = MKMapRectGetMaxX(rect);
+
+    if (rectMaxX > MKMapRectWorld.size.width) {
+        MKMapRect rectLeft = MKMapRectMake(
+            rect.origin.x,
+            rect.origin.y,
+            MKMapRectWorld.size.width - rect.origin.x,
+            rect.size.height
+        );
+
+        NSArray *annotationsLeft = [self _annotationsInMapRect:rectLeft];
+
+        MKMapRect rectRight = MKMapRectMake(
+            0,
+            rect.origin.y,
+            fmod(rectMaxX, MKMapRectWorld.size.width),
+            rect.size.height
+        );
+
+        NSArray *annotationsRight = [self _annotationsInMapRect:rectRight];
+        
+        return [annotationsLeft arrayByAddingObjectsFromArray:annotationsRight];
+    }
+    
+    NSArray *annotations = [self _annotationsInMapRect:rect];
+    
+    return annotations;
+}
+
+- (NSArray *)_annotationsInMapRect:(MKMapRect)rect {
     NSMutableArray *result = [NSMutableArray array];
 
     MKMapPoint minPoint = rect.origin;
