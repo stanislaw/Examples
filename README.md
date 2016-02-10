@@ -26,6 +26,8 @@ Xcode Analyzer produces wrong warning: "Function call argument is an uninitializ
 
 [StackOverflow: Terminfo: left arrow is mapped to backspace code (8) on default OSX terminal. Why is it so? And how to change it?](http://stackoverflow.com/questions/34319160/terminfo-left-arrow-is-mapped-to-backspace-code-8-on-default-osx-terminal-wh)
 
+### 2016-02-10 Kingpin: when viewing clusters over the international dateline cluster pins disappear
 
+[Demo project](https://github.com/stanislaw/Examples/tree/20160210-kingpin-international-dateline)
 
 
