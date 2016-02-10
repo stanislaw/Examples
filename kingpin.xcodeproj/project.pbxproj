@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		868955B91C6BCC620090FF39 /* KPAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 868955AC1C6BCC620090FF39 /* KPAnnotation.m */; };
+		868955BA1C6BCC620090FF39 /* KPAnnotationTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 868955AF1C6BCC620090FF39 /* KPAnnotationTree.m */; };
+		868955BB1C6BCC620090FF39 /* KPClusteringController.m in Sources */ = {isa = PBXBuildFile; fileRef = 868955B21C6BCC620090FF39 /* KPClusteringController.m */; };
+		868955BC1C6BCC620090FF39 /* KPGridClusteringAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 868955B61C6BCC620090FF39 /* KPGridClusteringAlgorithm.m */; };
+		868955BD1C6BCC620090FF39 /* NSArray+KP.m in Sources */ = {isa = PBXBuildFile; fileRef = 868955B81C6BCC620090FF39 /* NSArray+KP.m */; };
 		D25B6B851C6A7A4B0089AEE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25B6B841C6A7A4B0089AEE7 /* AppDelegate.swift */; };
 		D25B6B871C6A7A4B0089AEE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25B6B861C6A7A4B0089AEE7 /* ViewController.swift */; };
 		D25B6B8A1C6A7A4B0089AEE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D25B6B881C6A7A4B0089AEE7 /* Main.storyboard */; };
@@ -14,6 +19,7 @@
 		D25B6B8F1C6A7A4B0089AEE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D25B6B8D1C6A7A4B0089AEE7 /* LaunchScreen.storyboard */; };
 		D25B6B9A1C6A7A4B0089AEE7 /* kingpinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25B6B991C6A7A4B0089AEE7 /* kingpinTests.swift */; };
 		D25B6BA51C6A7A4B0089AEE7 /* kingpinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25B6BA41C6A7A4B0089AEE7 /* kingpinUITests.swift */; };
+		D25B6BB31C6A7A810089AEE7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25B6BB21C6A7A810089AEE7 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +40,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		868955A91C6BCC620090FF39 /* kingpin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kingpin.h; path = "../../../../stanislaw/Temporary/2016.02.10-kingpin-report-international-dateline/kingpin/kingpin.h"; sourceTree = "<group>"; };
+		868955AA1C6BCC620090FF39 /* kp_2dtree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kp_2dtree.h; path = "../../../../stanislaw/Temporary/2016.02.10-kingpin-report-international-dateline/kingpin/kp_2dtree.h"; sourceTree = "<group>"; };
+		868955AB1C6BCC620090FF39 /* KPAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KPAnnotation.h; path = "../../../../stanislaw/Temporary/2016.02.10-kingpin-report-international-dateline/kingpin/KPAnnotation.h"; sourceTree = "<group>"; };
+		868955AC1C6BCC620090FF39 /* KPAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KPAnnotation.m; path = "../../../../stanislaw/Temporary/2016.02.10-kingpin-report-international-dateline/kingpin/KPAnnotation.m"; sourceTree = "<group>"; };
+		868955AD1C6BCC620090FF39 /* KPAnnotationTree_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KPAnnotationTree_Private.h; path = "../../../../stanislaw/Temporary/2016.02.10-kingpin-report-international-dateline/kingpin/KPAnnotationTree_Private.h"; sourceTree = "<group>"; };
+		868955AE1C6BCC620090FF39 /* KPAnnotationTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KPAnnotationTree.h; path = "../../../../stanislaw/Temporary/2016.02.10-kingpin-report-international-dateline/kingpin/KPAnnotationTree.h"; sourceTree = "<group>"; };
+		868955AF1C6BCC620090FF39 /* KPAnnotationTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KPAnnotationTree.m; path = "../../../../stanislaw/Temporary/2016.02.10-kingpin-report-international-dateline/kingpin/KPAnnotationTree.m"; sourceTree = "<group>"; };
+		868955B01C6BCC620090FF39 /* KPClusteringAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KPClusteringAlgorithm.h; path = "../../../../stanislaw/Temporary/2016.02.10-kingpin-report-international-dateline/kingpin/KPClusteringAlgorithm.h"; sourceTree = "<group>"; };
+		868955B11C6BCC620090FF39 /* KPClusteringController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KPClusteringController.h; path = "../../../../stanislaw/Temporary/2016.02.10-kingpin-report-international-dateline/kingpin/KPClusteringController.h"; sourceTree = "<group>"; };
+		868955B21C6BCC620090FF39 /* KPClusteringController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KPClusteringController.m; path = "../../../../stanislaw/Temporary/2016.02.10-kingpin-report-international-dateline/kingpin/KPClusteringController.m"; sourceTree = "<group>"; };
+		868955B31C6BCC620090FF39 /* KPGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KPGeometry.h; path = "../../../../stanislaw/Temporary/2016.02.10-kingpin-report-international-dateline/kingpin/KPGeometry.h"; sourceTree = "<group>"; };
+		868955B41C6BCC620090FF39 /* KPGridClusteringAlgorithm_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KPGridClusteringAlgorithm_Private.h; path = "../../../../stanislaw/Temporary/2016.02.10-kingpin-report-international-dateline/kingpin/KPGridClusteringAlgorithm_Private.h"; sourceTree = "<group>"; };
+		868955B51C6BCC620090FF39 /* KPGridClusteringAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KPGridClusteringAlgorithm.h; path = "../../../../stanislaw/Temporary/2016.02.10-kingpin-report-international-dateline/kingpin/KPGridClusteringAlgorithm.h"; sourceTree = "<group>"; };
+		868955B61C6BCC620090FF39 /* KPGridClusteringAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KPGridClusteringAlgorithm.m; path = "../../../../stanislaw/Temporary/2016.02.10-kingpin-report-international-dateline/kingpin/KPGridClusteringAlgorithm.m"; sourceTree = "<group>"; };
+		868955B71C6BCC620090FF39 /* NSArray+KP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+KP.h"; path = "../../../../stanislaw/Temporary/2016.02.10-kingpin-report-international-dateline/kingpin/NSArray+KP.h"; sourceTree = "<group>"; };
+		868955B81C6BCC620090FF39 /* NSArray+KP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+KP.m"; path = "../../../../stanislaw/Temporary/2016.02.10-kingpin-report-international-dateline/kingpin/NSArray+KP.m"; sourceTree = "<group>"; };
 		D25B6B811C6A7A4B0089AEE7 /* kingpin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kingpin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25B6B841C6A7A4B0089AEE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D25B6B861C6A7A4B0089AEE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +69,8 @@
 		D25B6BA01C6A7A4B0089AEE7 /* kingpinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kingpinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25B6BA41C6A7A4B0089AEE7 /* kingpinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kingpinUITests.swift; sourceTree = "<group>"; };
 		D25B6BA61C6A7A4B0089AEE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D25B6BB21C6A7A810089AEE7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D25B6BB51C6A7B250089AEE7 /* kingpin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "kingpin-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D25B6BB31C6A7A810089AEE7 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +102,7 @@
 		D25B6B781C6A7A4B0089AEE7 = {
 			isa = PBXGroup;
 			children = (
+				D25B6BB21C6A7A810089AEE7 /* MapKit.framework */,
 				D25B6B831C6A7A4B0089AEE7 /* kingpin */,
 				D25B6B981C6A7A4B0089AEE7 /* kingpinTests */,
 				D25B6BA31C6A7A4B0089AEE7 /* kingpinUITests */,
@@ -97,10 +123,27 @@
 		D25B6B831C6A7A4B0089AEE7 /* kingpin */ = {
 			isa = PBXGroup;
 			children = (
+				868955A91C6BCC620090FF39 /* kingpin.h */,
+				868955AA1C6BCC620090FF39 /* kp_2dtree.h */,
+				868955AB1C6BCC620090FF39 /* KPAnnotation.h */,
+				868955AC1C6BCC620090FF39 /* KPAnnotation.m */,
+				868955AD1C6BCC620090FF39 /* KPAnnotationTree_Private.h */,
+				868955AE1C6BCC620090FF39 /* KPAnnotationTree.h */,
+				868955AF1C6BCC620090FF39 /* KPAnnotationTree.m */,
+				868955B01C6BCC620090FF39 /* KPClusteringAlgorithm.h */,
+				868955B11C6BCC620090FF39 /* KPClusteringController.h */,
+				868955B21C6BCC620090FF39 /* KPClusteringController.m */,
+				868955B31C6BCC620090FF39 /* KPGeometry.h */,
+				868955B41C6BCC620090FF39 /* KPGridClusteringAlgorithm_Private.h */,
+				868955B51C6BCC620090FF39 /* KPGridClusteringAlgorithm.h */,
+				868955B61C6BCC620090FF39 /* KPGridClusteringAlgorithm.m */,
+				868955B71C6BCC620090FF39 /* NSArray+KP.h */,
+				868955B81C6BCC620090FF39 /* NSArray+KP.m */,
 				D25B6B841C6A7A4B0089AEE7 /* AppDelegate.swift */,
 				D25B6B861C6A7A4B0089AEE7 /* ViewController.swift */,
 				D25B6B881C6A7A4B0089AEE7 /* Main.storyboard */,
 				D25B6B8B1C6A7A4B0089AEE7 /* Assets.xcassets */,
+				D25B6BB51C6A7B250089AEE7 /* kingpin-Bridging-Header.h */,
 				D25B6B8D1C6A7A4B0089AEE7 /* LaunchScreen.storyboard */,
 				D25B6B901C6A7A4B0089AEE7 /* Info.plist */,
 			);
@@ -256,8 +299,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				868955BD1C6BCC620090FF39 /* NSArray+KP.m in Sources */,
+				868955BC1C6BCC620090FF39 /* KPGridClusteringAlgorithm.m in Sources */,
 				D25B6B871C6A7A4B0089AEE7 /* ViewController.swift in Sources */,
+				868955B91C6BCC620090FF39 /* KPAnnotation.m in Sources */,
 				D25B6B851C6A7A4B0089AEE7 /* AppDelegate.swift in Sources */,
+				868955BA1C6BCC620090FF39 /* KPAnnotationTree.m in Sources */,
+				868955BB1C6BCC620090FF39 /* KPClusteringController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,10 +447,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = kingpin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.smahmood.kingpin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "kingpin/kingpin-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -410,10 +463,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = kingpin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.smahmood.kingpin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "kingpin/kingpin-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -484,6 +541,7 @@
 				D25B6BAB1C6A7A4B0089AEE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D25B6BAC1C6A7A4B0089AEE7 /* Build configuration list for PBXNativeTarget "kingpinTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +550,7 @@
 				D25B6BAE1C6A7A4B0089AEE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D25B6BAF1C6A7A4B0089AEE7 /* Build configuration list for PBXNativeTarget "kingpinUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +559,7 @@
 				D25B6BB11C6A7A4B0089AEE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
