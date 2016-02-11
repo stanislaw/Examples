@@ -49,33 +49,44 @@
 }
 
 - (NSArray *)annotationsInMapRect:(MKMapRect)rect {
-    double rectMaxX = MKMapRectGetMaxX(rect);
+    MKMapRect normalizedRect = rect;
 
-    if (rectMaxX > MKMapRectWorld.size.width) {
+    double rectMinX = fmod(MKMapRectGetMinX(rect), MKMapRectWorld.size.width);
+    double rectMaxX = fmod(MKMapRectGetMaxX(rect), MKMapRectWorld.size.width);
+
+    if (rectMinX > rectMaxX) {
         MKMapRect rectLeft = MKMapRectMake(
-            rect.origin.x,
-            rect.origin.y,
-            MKMapRectWorld.size.width - rect.origin.x,
-            rect.size.height
-        );
+                                           rectMinX,
+                                           rect.origin.y,
+                                           MKMapRectWorld.size.width - rectMinX,
+                                           rect.size.height
+                                           );
 
         NSArray *annotationsLeft = [self _annotationsInMapRect:rectLeft];
 
         MKMapRect rectRight = MKMapRectMake(
-            0,
-            rect.origin.y,
-            fmod(rectMaxX, MKMapRectWorld.size.width),
-            rect.size.height
-        );
+                                            0,
+                                            rect.origin.y,
+                                            rectMaxX,
+                                            rect.size.height
+                                            );
 
         NSArray *annotationsRight = [self _annotationsInMapRect:rectRight];
         
+        NSMutableArray *annotationsLeftMinusRight = [annotationsLeft mutableCopy];
+        [annotationsLeftMinusRight removeObjectsInArray:annotationsRight];
+        
+        NSAssert([annotationsLeftMinusRight isEqualToArray:annotationsLeft], nil);
+        
         return [annotationsLeft arrayByAddingObjectsFromArray:annotationsRight];
+    } else {
+        normalizedRect.origin.x = rectMinX;
+        normalizedRect.size.width = rectMaxX - rectMinX;
+
+        NSArray *annotations = [self _annotationsInMapRect:normalizedRect];
+
+        return annotations;
     }
-    
-    NSArray *annotations = [self _annotationsInMapRect:rect];
-    
-    return annotations;
 }
 
 - (NSArray *)_annotationsInMapRect:(MKMapRect)rect {

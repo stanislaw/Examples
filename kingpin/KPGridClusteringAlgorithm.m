@@ -84,6 +84,8 @@ static CGPoint CGPointFromNSValue(NSValue *value) {
 
     NSUInteger clusterIndex = 0;
 
+    NSUInteger totalNumberOfAnnotations = 0;
+
     for (NSUInteger col = 1; col < (gridSizeY + 1); col++) {
         for (NSUInteger row = 1; row < (gridSizeX + 1); row++) {
             double x = mapRect.origin.x + (row - 1) * mapCellSize.width;
@@ -92,6 +94,8 @@ static CGPoint CGPointFromNSValue(NSValue *value) {
             MKMapRect gridRect = MKMapRectMake(x, y, mapCellSize.width, mapCellSize.height);
 
             NSArray *newAnnotations = [annotationTree annotationsInMapRect:gridRect];
+
+            totalNumberOfAnnotations += newAnnotations.count;
 
             // cluster annotations in this grid piece, if there are annotations to be clustered
             if (newAnnotations.count > 0) {
@@ -113,7 +117,9 @@ static CGPoint CGPointFromNSValue(NSValue *value) {
             }
         }
     }
-    
+
+    NSLog(@"---- %tu", totalNumberOfAnnotations);
+
     if (self.clusteringStrategy == KPGridClusteringAlgorithmStrategyTwoPhase) {
         
         newClusters = (NSMutableArray *)[self _mergeOverlappingClusters:newClusters

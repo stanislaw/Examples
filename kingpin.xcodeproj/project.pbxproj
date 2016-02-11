@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		868955B91C6BCC620090FF39 /* KPAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 868955AC1C6BCC620090FF39 /* KPAnnotation.m */; };
-		868955BA1C6BCC620090FF39 /* KPAnnotationTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 868955AF1C6BCC620090FF39 /* KPAnnotationTree.m */; };
-		868955BB1C6BCC620090FF39 /* KPClusteringController.m in Sources */ = {isa = PBXBuildFile; fileRef = 868955B21C6BCC620090FF39 /* KPClusteringController.m */; };
-		868955BC1C6BCC620090FF39 /* KPGridClusteringAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 868955B61C6BCC620090FF39 /* KPGridClusteringAlgorithm.m */; };
-		868955BD1C6BCC620090FF39 /* NSArray+KP.m in Sources */ = {isa = PBXBuildFile; fileRef = 868955B81C6BCC620090FF39 /* NSArray+KP.m */; };
+		86F35E501C6C7DF2008E69D1 /* KPAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F35E411C6C7DF2008E69D1 /* KPAnnotation.m */; };
+		86F35E511C6C7DF2008E69D1 /* KPAnnotationTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F35E441C6C7DF2008E69D1 /* KPAnnotationTree.m */; };
+		86F35E521C6C7DF2008E69D1 /* KPClusteringController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F35E471C6C7DF2008E69D1 /* KPClusteringController.m */; };
+		86F35E531C6C7DF2008E69D1 /* KPGridClusteringAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F35E4B1C6C7DF2008E69D1 /* KPGridClusteringAlgorithm.m */; };
+		86F35E541C6C7DF2008E69D1 /* KPMapViewAnnotationTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F35E4D1C6C7DF2008E69D1 /* KPMapViewAnnotationTree.m */; };
+		86F35E551C6C7DF2008E69D1 /* NSArray+KP.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F35E4F1C6C7DF2008E69D1 /* NSArray+KP.m */; };
 		D25B6B851C6A7A4B0089AEE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25B6B841C6A7A4B0089AEE7 /* AppDelegate.swift */; };
 		D25B6B871C6A7A4B0089AEE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25B6B861C6A7A4B0089AEE7 /* ViewController.swift */; };
 		D25B6B8A1C6A7A4B0089AEE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D25B6B881C6A7A4B0089AEE7 /* Main.storyboard */; };
@@ -40,22 +41,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		868955A91C6BCC620090FF39 /* kingpin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kingpin.h; path = "../../../../stanislaw/Temporary/2016.02.10-kingpin-report-international-dateline/kingpin/kingpin.h"; sourceTree = "<group>"; };
-		868955AA1C6BCC620090FF39 /* kp_2dtree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kp_2dtree.h; path = "../../../../stanislaw/Temporary/2016.02.10-kingpin-report-international-dateline/kingpin/kp_2dtree.h"; sourceTree = "<group>"; };
-		868955AB1C6BCC620090FF39 /* KPAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KPAnnotation.h; path = "../../../../stanislaw/Temporary/2016.02.10-kingpin-report-international-dateline/kingpin/KPAnnotation.h"; sourceTree = "<group>"; };
-		868955AC1C6BCC620090FF39 /* KPAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KPAnnotation.m; path = "../../../../stanislaw/Temporary/2016.02.10-kingpin-report-international-dateline/kingpin/KPAnnotation.m"; sourceTree = "<group>"; };
-		868955AD1C6BCC620090FF39 /* KPAnnotationTree_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KPAnnotationTree_Private.h; path = "../../../../stanislaw/Temporary/2016.02.10-kingpin-report-international-dateline/kingpin/KPAnnotationTree_Private.h"; sourceTree = "<group>"; };
-		868955AE1C6BCC620090FF39 /* KPAnnotationTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KPAnnotationTree.h; path = "../../../../stanislaw/Temporary/2016.02.10-kingpin-report-international-dateline/kingpin/KPAnnotationTree.h"; sourceTree = "<group>"; };
-		868955AF1C6BCC620090FF39 /* KPAnnotationTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KPAnnotationTree.m; path = "../../../../stanislaw/Temporary/2016.02.10-kingpin-report-international-dateline/kingpin/KPAnnotationTree.m"; sourceTree = "<group>"; };
-		868955B01C6BCC620090FF39 /* KPClusteringAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KPClusteringAlgorithm.h; path = "../../../../stanislaw/Temporary/2016.02.10-kingpin-report-international-dateline/kingpin/KPClusteringAlgorithm.h"; sourceTree = "<group>"; };
-		868955B11C6BCC620090FF39 /* KPClusteringController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KPClusteringController.h; path = "../../../../stanislaw/Temporary/2016.02.10-kingpin-report-international-dateline/kingpin/KPClusteringController.h"; sourceTree = "<group>"; };
-		868955B21C6BCC620090FF39 /* KPClusteringController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KPClusteringController.m; path = "../../../../stanislaw/Temporary/2016.02.10-kingpin-report-international-dateline/kingpin/KPClusteringController.m"; sourceTree = "<group>"; };
-		868955B31C6BCC620090FF39 /* KPGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KPGeometry.h; path = "../../../../stanislaw/Temporary/2016.02.10-kingpin-report-international-dateline/kingpin/KPGeometry.h"; sourceTree = "<group>"; };
-		868955B41C6BCC620090FF39 /* KPGridClusteringAlgorithm_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KPGridClusteringAlgorithm_Private.h; path = "../../../../stanislaw/Temporary/2016.02.10-kingpin-report-international-dateline/kingpin/KPGridClusteringAlgorithm_Private.h"; sourceTree = "<group>"; };
-		868955B51C6BCC620090FF39 /* KPGridClusteringAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KPGridClusteringAlgorithm.h; path = "../../../../stanislaw/Temporary/2016.02.10-kingpin-report-international-dateline/kingpin/KPGridClusteringAlgorithm.h"; sourceTree = "<group>"; };
-		868955B61C6BCC620090FF39 /* KPGridClusteringAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KPGridClusteringAlgorithm.m; path = "../../../../stanislaw/Temporary/2016.02.10-kingpin-report-international-dateline/kingpin/KPGridClusteringAlgorithm.m"; sourceTree = "<group>"; };
-		868955B71C6BCC620090FF39 /* NSArray+KP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+KP.h"; path = "../../../../stanislaw/Temporary/2016.02.10-kingpin-report-international-dateline/kingpin/NSArray+KP.h"; sourceTree = "<group>"; };
-		868955B81C6BCC620090FF39 /* NSArray+KP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+KP.m"; path = "../../../../stanislaw/Temporary/2016.02.10-kingpin-report-international-dateline/kingpin/NSArray+KP.m"; sourceTree = "<group>"; };
+		86F35E3E1C6C7DF2008E69D1 /* kingpin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kingpin.h; sourceTree = "<group>"; };
+		86F35E3F1C6C7DF2008E69D1 /* kp_2dtree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kp_2dtree.h; sourceTree = "<group>"; };
+		86F35E401C6C7DF2008E69D1 /* KPAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPAnnotation.h; sourceTree = "<group>"; };
+		86F35E411C6C7DF2008E69D1 /* KPAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPAnnotation.m; sourceTree = "<group>"; };
+		86F35E421C6C7DF2008E69D1 /* KPAnnotationTree_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPAnnotationTree_Private.h; sourceTree = "<group>"; };
+		86F35E431C6C7DF2008E69D1 /* KPAnnotationTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPAnnotationTree.h; sourceTree = "<group>"; };
+		86F35E441C6C7DF2008E69D1 /* KPAnnotationTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPAnnotationTree.m; sourceTree = "<group>"; };
+		86F35E451C6C7DF2008E69D1 /* KPClusteringAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPClusteringAlgorithm.h; sourceTree = "<group>"; };
+		86F35E461C6C7DF2008E69D1 /* KPClusteringController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPClusteringController.h; sourceTree = "<group>"; };
+		86F35E471C6C7DF2008E69D1 /* KPClusteringController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPClusteringController.m; sourceTree = "<group>"; };
+		86F35E481C6C7DF2008E69D1 /* KPGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPGeometry.h; sourceTree = "<group>"; };
+		86F35E491C6C7DF2008E69D1 /* KPGridClusteringAlgorithm_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPGridClusteringAlgorithm_Private.h; sourceTree = "<group>"; };
+		86F35E4A1C6C7DF2008E69D1 /* KPGridClusteringAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPGridClusteringAlgorithm.h; sourceTree = "<group>"; };
+		86F35E4B1C6C7DF2008E69D1 /* KPGridClusteringAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPGridClusteringAlgorithm.m; sourceTree = "<group>"; };
+		86F35E4C1C6C7DF2008E69D1 /* KPMapViewAnnotationTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPMapViewAnnotationTree.h; sourceTree = "<group>"; };
+		86F35E4D1C6C7DF2008E69D1 /* KPMapViewAnnotationTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPMapViewAnnotationTree.m; sourceTree = "<group>"; };
+		86F35E4E1C6C7DF2008E69D1 /* NSArray+KP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+KP.h"; sourceTree = "<group>"; };
+		86F35E4F1C6C7DF2008E69D1 /* NSArray+KP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+KP.m"; sourceTree = "<group>"; };
 		D25B6B811C6A7A4B0089AEE7 /* kingpin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kingpin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25B6B841C6A7A4B0089AEE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D25B6B861C6A7A4B0089AEE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -123,22 +126,24 @@
 		D25B6B831C6A7A4B0089AEE7 /* kingpin */ = {
 			isa = PBXGroup;
 			children = (
-				868955A91C6BCC620090FF39 /* kingpin.h */,
-				868955AA1C6BCC620090FF39 /* kp_2dtree.h */,
-				868955AB1C6BCC620090FF39 /* KPAnnotation.h */,
-				868955AC1C6BCC620090FF39 /* KPAnnotation.m */,
-				868955AD1C6BCC620090FF39 /* KPAnnotationTree_Private.h */,
-				868955AE1C6BCC620090FF39 /* KPAnnotationTree.h */,
-				868955AF1C6BCC620090FF39 /* KPAnnotationTree.m */,
-				868955B01C6BCC620090FF39 /* KPClusteringAlgorithm.h */,
-				868955B11C6BCC620090FF39 /* KPClusteringController.h */,
-				868955B21C6BCC620090FF39 /* KPClusteringController.m */,
-				868955B31C6BCC620090FF39 /* KPGeometry.h */,
-				868955B41C6BCC620090FF39 /* KPGridClusteringAlgorithm_Private.h */,
-				868955B51C6BCC620090FF39 /* KPGridClusteringAlgorithm.h */,
-				868955B61C6BCC620090FF39 /* KPGridClusteringAlgorithm.m */,
-				868955B71C6BCC620090FF39 /* NSArray+KP.h */,
-				868955B81C6BCC620090FF39 /* NSArray+KP.m */,
+				86F35E3E1C6C7DF2008E69D1 /* kingpin.h */,
+				86F35E3F1C6C7DF2008E69D1 /* kp_2dtree.h */,
+				86F35E401C6C7DF2008E69D1 /* KPAnnotation.h */,
+				86F35E411C6C7DF2008E69D1 /* KPAnnotation.m */,
+				86F35E421C6C7DF2008E69D1 /* KPAnnotationTree_Private.h */,
+				86F35E431C6C7DF2008E69D1 /* KPAnnotationTree.h */,
+				86F35E441C6C7DF2008E69D1 /* KPAnnotationTree.m */,
+				86F35E451C6C7DF2008E69D1 /* KPClusteringAlgorithm.h */,
+				86F35E461C6C7DF2008E69D1 /* KPClusteringController.h */,
+				86F35E471C6C7DF2008E69D1 /* KPClusteringController.m */,
+				86F35E481C6C7DF2008E69D1 /* KPGeometry.h */,
+				86F35E491C6C7DF2008E69D1 /* KPGridClusteringAlgorithm_Private.h */,
+				86F35E4A1C6C7DF2008E69D1 /* KPGridClusteringAlgorithm.h */,
+				86F35E4B1C6C7DF2008E69D1 /* KPGridClusteringAlgorithm.m */,
+				86F35E4C1C6C7DF2008E69D1 /* KPMapViewAnnotationTree.h */,
+				86F35E4D1C6C7DF2008E69D1 /* KPMapViewAnnotationTree.m */,
+				86F35E4E1C6C7DF2008E69D1 /* NSArray+KP.h */,
+				86F35E4F1C6C7DF2008E69D1 /* NSArray+KP.m */,
 				D25B6B841C6A7A4B0089AEE7 /* AppDelegate.swift */,
 				D25B6B861C6A7A4B0089AEE7 /* ViewController.swift */,
 				D25B6B881C6A7A4B0089AEE7 /* Main.storyboard */,
@@ -299,13 +304,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				868955BD1C6BCC620090FF39 /* NSArray+KP.m in Sources */,
-				868955BC1C6BCC620090FF39 /* KPGridClusteringAlgorithm.m in Sources */,
+				86F35E531C6C7DF2008E69D1 /* KPGridClusteringAlgorithm.m in Sources */,
 				D25B6B871C6A7A4B0089AEE7 /* ViewController.swift in Sources */,
-				868955B91C6BCC620090FF39 /* KPAnnotation.m in Sources */,
+				86F35E501C6C7DF2008E69D1 /* KPAnnotation.m in Sources */,
 				D25B6B851C6A7A4B0089AEE7 /* AppDelegate.swift in Sources */,
-				868955BA1C6BCC620090FF39 /* KPAnnotationTree.m in Sources */,
-				868955BB1C6BCC620090FF39 /* KPClusteringController.m in Sources */,
+				86F35E511C6C7DF2008E69D1 /* KPAnnotationTree.m in Sources */,
+				86F35E551C6C7DF2008E69D1 /* NSArray+KP.m in Sources */,
+				86F35E541C6C7DF2008E69D1 /* KPMapViewAnnotationTree.m in Sources */,
+				86F35E521C6C7DF2008E69D1 /* KPClusteringController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
