@@ -30,4 +30,9 @@ Xcode Analyzer produces wrong warning: "Function call argument is an uninitializ
 
 [Demo project](https://github.com/stanislaw/Examples/tree/20160210-kingpin-international-dateline)
 
+### 2016-03-12 How to create scrollable NSTextView programmatically?
+
+Working example based on Apple documentation: [Text System User Interface Layer Programming Guide - Putting an NSTextView Object in an NSScrollView](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/TextUILayer/Tasks/TextInScrollView.html).
+
+[Demo project](https://github.com/stanislaw/Examples/tree/20160312-osx-scrollable-nstextview)
 
