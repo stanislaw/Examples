@@ -36,3 +36,9 @@ Working example based on Apple documentation: [Text System User Interface Layer 
 
 [Demo project](https://github.com/stanislaw/Examples/tree/20160312-osx-scrollable-nstextview)
 
+### 2016-03-23 Terminal-like NSTextView
+
+[Demo project](https://github.com/stanislaw/Examples/tree/20160322-osx-nstextview-terminal-like)
+
+Original StackOverflow topic: [NSTextView: how to disable single clicks but still allow selection for copy-and-paste?](http://stackoverflow.com/questions/36138607/nstextview-how-to-disable-single-clicks-but-still-allow-selection-for-copy-and).
+
