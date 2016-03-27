@@ -1,0 +1,26 @@
+%{
+#include <stdio.h>
+    int yylex(void);
+    void yyerror (const char *msg);
+%}
+
+%union {
+    char *string;
+}
+
+%token <string> Token_String
+
+%%
+
+/* http://www.tldp.org/HOWTO/Lex-YACC-HOWTO-6.html 6.2 Recursion: 'right is wrong' */
+tokens: /* empty */
+| tokens token
+
+token:
+    Token_String {
+        printf("[PARSER, string] %s\n", $1);
+
+        free($1);
+    }
+
+%%

@@ -1,0 +1,51 @@
+%{
+
+#import <Foundation/Foundation.h>
+#import "y.tab.h"
+
+%}
+
+%option debug
+%option pointer
+%option nodefault
+%option yywrap
+%option 8bit
+%option yylineno
+%option noinput
+%option nounput
+
+FOO FOO
+SPACE \x20
+
+%%
+
+{FOO} {
+
+}
+
+{SPACE} {
+
+}
+
+<<EOF>> {
+    printf("<<EOF>>\n");
+
+    return 0;
+}
+
+%%
+
+void yyerror (const char *msg) {
+    printf("line %d: %s\n", yylineno, msg);
+}
+
+int yywrap() {
+   printf("yywrap is called! \n");
+
+    // if there is a file switch to it
+    // if((yyin = someNewFile) != NULL) {
+    //    return 0
+    //}
+
+return 1;
+}
