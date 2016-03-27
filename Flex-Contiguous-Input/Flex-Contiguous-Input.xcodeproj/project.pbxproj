@@ -215,14 +215,20 @@
 		86D1A7211CA7F4E70021BF4E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LEXFLAGS = "";
+				LEX_SUPPRESS_DEFAULT_RULE = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				YACC_GENERATE_DEBUGGING_DIRECTIVES = YES;
 			};
 			name = Debug;
 		};
 		86D1A7221CA7F4E70021BF4E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LEXFLAGS = "";
+				LEX_SUPPRESS_DEFAULT_RULE = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				YACC_GENERATE_DEBUGGING_DIRECTIVES = YES;
 			};
 			name = Release;
 		};

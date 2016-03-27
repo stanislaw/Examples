@@ -3,6 +3,9 @@
 #import <Foundation/Foundation.h>
 #import "y.tab.h"
 
+#undef YY_INPUT
+#define YY_INPUT(b,r,s) readInputForLexer(b,&r,s)
+
 %}
 
 %option debug
@@ -28,9 +31,9 @@ SPACE \x20
 }
 
 <<EOF>> {
-    printf("<<EOF>>\n");
+printf("<<EOF>>\n");
 
-    return 0;
+return 0;
 }
 
 %%
