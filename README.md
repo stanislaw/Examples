@@ -48,3 +48,11 @@ Original StackOverflow topic: [NSTextView: how to disable single clicks but stil
 
 Original StackOverflow topic: [How to detect partial unfinished token and join its pieces that are obtained from two consequent portions of input?](http://stackoverflow.com/questions/36242886/how-to-detect-partial-unfinished-token-and-join-its-pieces-that-are-obtained-fro).
 
+### 2016-03-28 Reentrant aka thread-safe parser with Flex and Bison
+
+[Demo project](https://github.com/stanislaw/Examples/tree/20160328-reentrant-parser-with-flex-and-bison)
+
+Original StackOverflow topic: [Problems with reentrant flex and bison](http://stackoverflow.com/questions/32535097/problems-with-reentrant-flex-and-bison).
+
+
+
