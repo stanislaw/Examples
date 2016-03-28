@@ -44,7 +44,7 @@ Original StackOverflow topic: [NSTextView: how to disable single clicks but stil
 
 ### 2016-03-27 Flex: How to detect partial unfinished token and join its pieces that are obtained from two consequent portions of input?
 
-[Demo project](https://github.com/stanislaw/Examples/tree/20160322-osx-nstextview-terminal-lik://github.com/stanislaw/Examples/tree/20160322-flex-contigous-input)
+[Demo project](https://github.com/stanislaw/Examples/tree/20160322-flex-contigous-input)
 
 Original StackOverflow topic: [How to detect partial unfinished token and join its pieces that are obtained from two consequent portions of input?](http://stackoverflow.com/questions/36242886/how-to-detect-partial-unfinished-token-and-join-its-pieces-that-are-obtained-fro).
 
