@@ -1,0 +1,49 @@
+
+%{
+    #import "ParserConsumer.h"
+
+    #import "parser.h"
+    #import "lexer.h"
+
+    void yyerror(void *scanner, id <ParserConsumer> consumer, const char *msg);
+%}
+
+%output  "Parser/Generated Code/parser.m"
+%defines "Parser/Generated Code/parser.h"
+
+%define api.pure full
+%define parse.error verbose
+
+%lex-param { void *scanner }
+
+%parse-param { void *scanner }
+%parse-param { id <ParserConsumer> consumer }
+
+%union {
+    char *stringValue;
+    int numericValue;
+}
+
+%token <stringValue> Token_String
+%token <numericValue> Token_Number
+
+%%
+
+/* http://www.tldp.org/HOWTO/Lex-YACC-HOWTO-6.html 6.2 Recursion: 'right is wrong' */
+tokens: /* empty */
+      | tokens token
+
+token:
+    Token_String {
+        printf("[Parser, string] %s\n", $1);
+
+        [consumer parserDidParseString:$1];
+
+        free($1);
+    }
+    | Token_Number {
+        printf("[Parser, number] %d\n", $1);
+
+        [consumer parserDidParseNumber:$1];
+    }
+%%

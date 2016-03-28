@@ -1,0 +1,63 @@
+%{
+
+#import "ParserConsumer.h"
+#import "parser.h"
+
+%}
+
+%option header-file = "./Parser/Generated Code/lexer.h"
+%option outfile     = "./Parser/Generated Code/lexer.m"
+
+%option 8bit
+%option bison-bridge
+  //%option debug
+%option pointer
+%option nodefault
+%option noinput
+%option nounput
+%option noyywrap
+%option reentrant
+%option warn
+
+%x LEXING_ERROR
+  /*%x CONTROL_SYMBOL*/
+
+NUMBER [0-9]+
+STRING [A-Z]+
+SPACE \x20
+
+%%
+
+{NUMBER} {
+    yylval->numericValue = (int)strtoul(yytext, NULL, 10);
+
+    printf("[Lexer, number] %s\n", yytext);
+
+    return Token_Number;
+}
+
+{STRING} {
+    yylval->stringValue = strdup(yytext);
+
+    printf("[Lexer, string] %s\n", yytext);
+
+    return Token_String;
+}
+
+{SPACE} {
+    // Do nothing
+}
+
+<<EOF>> {
+    printf("<<EOF>>\n");
+
+    return 0;
+}
+
+%%
+
+void yyerror (void *scanner, id <ParserConsumer> consumer, const char *msg) {
+    printf(stderr, "%s\n", msg);
+
+    abort();
+}
