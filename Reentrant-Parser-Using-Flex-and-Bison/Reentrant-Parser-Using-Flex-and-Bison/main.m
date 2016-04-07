@@ -10,8 +10,8 @@
 
 #import "ParserConsumer.h"
 
-#import "parser.h"
-#import "lexer.h"
+#import "Parser.h"
+#import "Lexer.h"
 
 @interface ParserConsumer : NSObject <ParserConsumer>
 @end
