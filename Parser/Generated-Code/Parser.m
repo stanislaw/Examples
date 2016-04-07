@@ -62,7 +62,7 @@
 
 
 /* Copy the first part of user declarations.  */
-#line 2 "./Parser/Parser.ym" /* yacc.c:339  */
+#line 3 "./Source/Parser.ym" /* yacc.c:339  */
 
     #import "ParserConsumer.h"
 
@@ -71,7 +71,7 @@
 
     void yyerror(void *scanner, id <ParserConsumer> consumer, const char *msg);
 
-#line 75 "Parser/Generated Code/parser.m" /* yacc.c:339  */
+#line 75 "./Generated-Code/Parser.m" /* yacc.c:339  */
 
 # ifndef YY_NULLPTR
 #  if defined __cplusplus && 201103L <= __cplusplus
@@ -90,9 +90,9 @@
 #endif
 
 /* In a future release of Bison, this section will be replaced
-   by #include "parser.h".  */
-#ifndef YY_YY_PARSER_GENERATED_CODE_PARSER_H_INCLUDED
-# define YY_YY_PARSER_GENERATED_CODE_PARSER_H_INCLUDED
+   by #include "Parser.h".  */
+#ifndef YY_YY_GENERATED_CODE_PARSER_H_INCLUDED
+# define YY_YY_GENERATED_CODE_PARSER_H_INCLUDED
 /* Debug traces.  */
 #ifndef YYDEBUG
 # define YYDEBUG 0
@@ -116,12 +116,12 @@ extern int yydebug;
 
 union YYSTYPE
 {
-#line 22 "./Parser/Parser.ym" /* yacc.c:355  */
+#line 24 "./Source/Parser.ym" /* yacc.c:355  */
 
     char *stringValue;
     int numericValue;
 
-#line 125 "Parser/Generated Code/parser.m" /* yacc.c:355  */
+#line 125 "./Generated-Code/Parser.m" /* yacc.c:355  */
 };
 
 typedef union YYSTYPE YYSTYPE;
@@ -133,11 +133,11 @@ typedef union YYSTYPE YYSTYPE;
 
 int yyparse (void *scanner, id <ParserConsumer> consumer);
 
-#endif /* !YY_YY_PARSER_GENERATED_CODE_PARSER_H_INCLUDED  */
+#endif /* !YY_YY_GENERATED_CODE_PARSER_H_INCLUDED  */
 
 /* Copy the second part of user declarations.  */
 
-#line 141 "Parser/Generated Code/parser.m" /* yacc.c:358  */
+#line 141 "./Generated-Code/Parser.m" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -434,7 +434,7 @@ static const yytype_uint8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    33,    33,    34,    37,    44
+       0,    35,    35,    36,    39,    46
 };
 #endif
 
@@ -1208,7 +1208,7 @@ yyreduce:
   switch (yyn)
     {
         case 4:
-#line 37 "./Parser/Parser.ym" /* yacc.c:1661  */
+#line 39 "./Source/Parser.ym" /* yacc.c:1661  */
     {
         printf("[Parser, string] %s\n", (yyvsp[0].stringValue));
 
@@ -1216,21 +1216,21 @@ yyreduce:
 
         free((yyvsp[0].stringValue));
     }
-#line 1220 "Parser/Generated Code/parser.m" /* yacc.c:1661  */
+#line 1220 "./Generated-Code/Parser.m" /* yacc.c:1661  */
     break;
 
   case 5:
-#line 44 "./Parser/Parser.ym" /* yacc.c:1661  */
+#line 46 "./Source/Parser.ym" /* yacc.c:1661  */
     {
         printf("[Parser, number] %d\n", (yyvsp[0].numericValue));
 
         [consumer parserDidParseNumber:(yyvsp[0].numericValue)];
     }
-#line 1230 "Parser/Generated Code/parser.m" /* yacc.c:1661  */
+#line 1230 "./Generated-Code/Parser.m" /* yacc.c:1661  */
     break;
 
 
-#line 1234 "Parser/Generated Code/parser.m" /* yacc.c:1661  */
+#line 1234 "./Generated-Code/Parser.m" /* yacc.c:1661  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1458,5 +1458,5 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 49 "./Parser/Parser.ym" /* yacc.c:1906  */
+#line 51 "./Source/Parser.ym" /* yacc.c:1906  */
 

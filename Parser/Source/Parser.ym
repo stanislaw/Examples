@@ -1,4 +1,5 @@
 
+
 %{
     #import "ParserConsumer.h"
 
@@ -8,8 +9,9 @@
     void yyerror(void *scanner, id <ParserConsumer> consumer, const char *msg);
 %}
 
-%output  "Parser/Generated Code/parser.m"
-%defines "Parser/Generated Code/parser.h"
+  // output files are set via command-line params in Makefile
+  //%output  "Parser/Generated Code/parser.m"
+  //%defines "Parser/Generated Code/parser.h"
 
 %define api.pure full
 %define parse.error verbose

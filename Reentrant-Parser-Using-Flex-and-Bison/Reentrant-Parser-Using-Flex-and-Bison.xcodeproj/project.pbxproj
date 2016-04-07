@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8630F4DC1CA99FD300E2CEA3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8630F4DB1CA99FD300E2CEA3 /* main.m */; };
-		8630F4F11CA9A3E900E2CEA3 /* lexer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8630F4EE1CA9A3E900E2CEA3 /* lexer.m */; };
-		8630F4F21CA9A3E900E2CEA3 /* parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8630F4F01CA9A3E900E2CEA3 /* parser.m */; };
+		8685C32C1CB6E674002CE882 /* Lexer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8685C3241CB6E674002CE882 /* Lexer.m */; };
+		8685C32D1CB6E674002CE882 /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8685C3261CB6E674002CE882 /* Parser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,13 +27,14 @@
 /* Begin PBXFileReference section */
 		8630F4D81CA99FD300E2CEA3 /* Reentrant-Parser-Using-Flex-and-Bison */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Reentrant-Parser-Using-Flex-and-Bison"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8630F4DB1CA99FD300E2CEA3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8630F4E51CA9A08C00E2CEA3 /* Lexer.lm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; path = Lexer.lm; sourceTree = "<group>"; };
-		8630F4E61CA9A08C00E2CEA3 /* Parser.ym */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.yacc; path = Parser.ym; sourceTree = "<group>"; };
-		8630F4E71CA9A08C00E2CEA3 /* ParserConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParserConsumer.h; sourceTree = "<group>"; };
-		8630F4ED1CA9A3E900E2CEA3 /* lexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lexer.h; sourceTree = "<group>"; };
-		8630F4EE1CA9A3E900E2CEA3 /* lexer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lexer.m; sourceTree = "<group>"; };
-		8630F4EF1CA9A3E900E2CEA3 /* parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parser.h; sourceTree = "<group>"; };
-		8630F4F01CA9A3E900E2CEA3 /* parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = parser.m; sourceTree = "<group>"; };
+		8685C3231CB6E674002CE882 /* Lexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lexer.h; sourceTree = "<group>"; };
+		8685C3241CB6E674002CE882 /* Lexer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lexer.m; sourceTree = "<group>"; };
+		8685C3251CB6E674002CE882 /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
+		8685C3261CB6E674002CE882 /* Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parser.m; sourceTree = "<group>"; };
+		8685C3271CB6E674002CE882 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		8685C3291CB6E674002CE882 /* Lexer.lm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; path = Lexer.lm; sourceTree = "<group>"; };
+		8685C32A1CB6E674002CE882 /* Parser.ym */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.yacc; path = Parser.ym; sourceTree = "<group>"; };
+		8685C32B1CB6E674002CE882 /* ParserConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParserConsumer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +51,7 @@
 		8630F4CF1CA99FD200E2CEA3 = {
 			isa = PBXGroup;
 			children = (
-				8630F4E21CA9A08C00E2CEA3 /* Parser */,
+				8685C3211CB6E674002CE882 /* Parser */,
 				8630F4DA1CA99FD300E2CEA3 /* Reentrant-Parser-Using-Flex-and-Bison */,
 				8630F4D91CA99FD300E2CEA3 /* Products */,
 			);
@@ -72,27 +73,36 @@
 			path = "Reentrant-Parser-Using-Flex-and-Bison";
 			sourceTree = "<group>";
 		};
-		8630F4E21CA9A08C00E2CEA3 /* Parser */ = {
+		8685C3211CB6E674002CE882 /* Parser */ = {
 			isa = PBXGroup;
 			children = (
-				8630F4EC1CA9A3E900E2CEA3 /* Generated Code */,
-				8630F4E51CA9A08C00E2CEA3 /* Lexer.lm */,
-				8630F4E61CA9A08C00E2CEA3 /* Parser.ym */,
-				8630F4E71CA9A08C00E2CEA3 /* ParserConsumer.h */,
+				8685C3221CB6E674002CE882 /* Generated-Code */,
+				8685C3271CB6E674002CE882 /* Makefile */,
+				8685C3281CB6E674002CE882 /* Source */,
 			);
 			name = Parser;
 			path = ../Parser;
 			sourceTree = "<group>";
 		};
-		8630F4EC1CA9A3E900E2CEA3 /* Generated Code */ = {
+		8685C3221CB6E674002CE882 /* Generated-Code */ = {
 			isa = PBXGroup;
 			children = (
-				8630F4ED1CA9A3E900E2CEA3 /* lexer.h */,
-				8630F4EE1CA9A3E900E2CEA3 /* lexer.m */,
-				8630F4EF1CA9A3E900E2CEA3 /* parser.h */,
-				8630F4F01CA9A3E900E2CEA3 /* parser.m */,
+				8685C3231CB6E674002CE882 /* Lexer.h */,
+				8685C3241CB6E674002CE882 /* Lexer.m */,
+				8685C3251CB6E674002CE882 /* Parser.h */,
+				8685C3261CB6E674002CE882 /* Parser.m */,
 			);
-			path = "Generated Code";
+			path = "Generated-Code";
+			sourceTree = "<group>";
+		};
+		8685C3281CB6E674002CE882 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				8685C3291CB6E674002CE882 /* Lexer.lm */,
+				8685C32A1CB6E674002CE882 /* Parser.ym */,
+				8685C32B1CB6E674002CE882 /* ParserConsumer.h */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,7 +170,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd ../\nmake\n";
+			shellScript = "cd ./../Parser\nmake\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -169,8 +179,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8630F4F21CA9A3E900E2CEA3 /* parser.m in Sources */,
-				8630F4F11CA9A3E900E2CEA3 /* lexer.m in Sources */,
+				8685C32C1CB6E674002CE882 /* Lexer.m in Sources */,
+				8685C32D1CB6E674002CE882 /* Parser.m in Sources */,
 				8630F4DC1CA99FD300E2CEA3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

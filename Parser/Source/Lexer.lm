@@ -5,22 +5,20 @@
 
 %}
 
-%option header-file = "./Parser/Generated Code/lexer.h"
-%option outfile     = "./Parser/Generated Code/lexer.m"
+  // output files are set via command-line params in Makefile
+  //%option header-file = "./Parser/Generated Code/lexer.h"
+  //%option outfile     = "./Parser/Generated Code/lexer.m"
 
 %option 8bit
 %option bison-bridge
   //%option debug
 %option pointer
-%option nodefault
+  //%option nodefault
 %option noinput
 %option nounput
 %option noyywrap
 %option reentrant
 %option warn
-
-%x LEXING_ERROR
-  /*%x CONTROL_SYMBOL*/
 
 NUMBER [0-9]+
 STRING [A-Z]+
@@ -47,6 +45,13 @@ SPACE \x20
 {SPACE} {
     // Do nothing
 }
+
+  /**
+   this is can act as default rule when %nodefault is enabled: just echo unknown input and do nothing
+   
+   . ECHO;
+   \n ECHO;
+  */
 
 <<EOF>> {
     printf("<<EOF>>\n");

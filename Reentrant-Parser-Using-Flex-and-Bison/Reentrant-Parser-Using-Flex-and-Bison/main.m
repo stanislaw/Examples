@@ -38,7 +38,7 @@ int main(int argc, const char * argv[]) {
             perror("yylex_init error");
         }
 
-        char input[] = "RAINBOW UNICORN 1234 UNICORN";
+        char input[] = "RAINBOW UNICORN 1234 UNICORN garbage garbage";
 
         yy_scan_string(input, scanner);
 

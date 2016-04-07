@@ -30,8 +30,8 @@
    This special exception was added by the Free Software Foundation in
    version 2.2 of Bison.  */
 
-#ifndef YY_YY_PARSER_GENERATED_CODE_PARSER_H_INCLUDED
-# define YY_YY_PARSER_GENERATED_CODE_PARSER_H_INCLUDED
+#ifndef YY_YY_GENERATED_CODE_PARSER_H_INCLUDED
+# define YY_YY_GENERATED_CODE_PARSER_H_INCLUDED
 /* Debug traces.  */
 #ifndef YYDEBUG
 # define YYDEBUG 0
@@ -55,12 +55,12 @@ extern int yydebug;
 
 union YYSTYPE
 {
-#line 22 "./Parser/Parser.ym" /* yacc.c:1915  */
+#line 24 "./Source/Parser.ym" /* yacc.c:1915  */
 
     char *stringValue;
     int numericValue;
 
-#line 64 "Parser/Generated Code/parser.h" /* yacc.c:1915  */
+#line 64 "./Generated-Code/Parser.h" /* yacc.c:1915  */
 };
 
 typedef union YYSTYPE YYSTYPE;
@@ -72,4 +72,4 @@ typedef union YYSTYPE YYSTYPE;
 
 int yyparse (void *scanner, id <ParserConsumer> consumer);
 
-#endif /* !YY_YY_PARSER_GENERATED_CODE_PARSER_H_INCLUDED  */
+#endif /* !YY_YY_GENERATED_CODE_PARSER_H_INCLUDED  */

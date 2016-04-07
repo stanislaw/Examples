@@ -1,6 +1,6 @@
-#line 2 "./Parser/Generated Code/lexer.m"
+#line 2 "./Generated-Code/Lexer.m"
 
-#line 4 "./Parser/Generated Code/lexer.m"
+#line 4 "./Generated-Code/Lexer.m"
 
 #define  YY_INT_ALIGNED short int
 
@@ -371,10 +371,9 @@ struct yy_trans_info
 	flex_int32_t yy_verify;
 	flex_int32_t yy_nxt;
 	};
-static yyconst flex_int16_t yy_accept[13] =
+static yyconst flex_int16_t yy_accept[11] =
     {   0,
-        0,    0,    0,    0,    5,    4,    3,    1,    2,    1,
-        2,    0
+        0,    0,    5,    4,    3,    1,    2,    1,    2,    0
     } ;
 
 static yyconst YY_CHAR yy_ec[256] =
@@ -414,28 +413,28 @@ static yyconst YY_CHAR yy_meta[5] =
         1,    1,    2,    3
     } ;
 
-static yyconst flex_uint16_t yy_base[16] =
+static yyconst flex_uint16_t yy_base[13] =
     {   0,
-        0,    0,    0,    0,   10,   11,   11,    0,    0,    0,
-        0,   11,    4,    7,    5
+        0,    0,    7,    8,    8,    0,    0,    0,    0,    8,
+        4,    2
     } ;
 
-static yyconst flex_int16_t yy_def[16] =
+static yyconst flex_int16_t yy_def[13] =
     {   0,
-       12,    1,   13,   13,   12,   12,   12,   14,   15,   14,
-       15,    0,   12,   12,   12
+       10,    1,   10,   10,   10,   11,   12,   11,   12,    0,
+       10,   10
     } ;
 
-static yyconst flex_uint16_t yy_nxt[16] =
+static yyconst flex_uint16_t yy_nxt[13] =
     {   0,
-        6,    7,    8,    9,    6,    6,    6,   11,   10,   12,
-        5,   12,   12,   12,   12
+        4,    5,    6,    7,    9,    8,   10,    3,   10,   10,
+       10,   10
     } ;
 
-static yyconst flex_int16_t yy_chk[16] =
+static yyconst flex_int16_t yy_chk[13] =
     {   0,
-        1,    1,    1,    1,   13,   13,   13,   15,   14,    5,
-       12,   12,   12,   12,   12
+        1,    1,    1,    1,   12,   11,    3,   10,   10,   10,
+       10,   10
     } ;
 
 /* The intent behind this definition is that it'll catch
@@ -445,20 +444,21 @@ static yyconst flex_int16_t yy_chk[16] =
 #define yymore() yymore_used_but_not_detected
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
-#line 1 "./Parser/Lexer.lm"
-#line 2 "./Parser/Lexer.lm"
+#line 1 "./Source/Lexer.lm"
+#line 2 "./Source/Lexer.lm"
 
 #import "ParserConsumer.h"
 #import "parser.h"
 
+// output files are set via command-line params in Makefile
+//%option header-file = "./Parser/Generated Code/lexer.h"
+//%option outfile     = "./Parser/Generated Code/lexer.m"
 //%option debug
+//%option nodefault
 #define YY_NO_INPUT 1
-
-/*%x CONTROL_SYMBOL*/
-#line 459 "./Parser/Generated Code/lexer.m"
+#line 460 "./Generated-Code/Lexer.m"
 
 #define INITIAL 0
-#define LEXING_ERROR 1
 
 #ifndef YY_NO_UNISTD_H
 /* Special case for "unistd.h", since it is non-ANSI. We include it way
@@ -729,10 +729,10 @@ YY_DECL
 		}
 
 	{
-#line 29 "./Parser/Lexer.lm"
+#line 27 "./Source/Lexer.lm"
 
 
-#line 736 "./Parser/Generated Code/lexer.m"
+#line 736 "./Generated-Code/Lexer.m"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -759,13 +759,13 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 13 )
+				if ( yy_current_state >= 11 )
 					yy_c = yy_meta[(unsigned int) yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 11 );
+		while ( yy_base[yy_current_state] != 8 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -791,7 +791,7 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 31 "./Parser/Lexer.lm"
+#line 29 "./Source/Lexer.lm"
 {
     yylval->numericValue = (int)strtoul(yytext, NULL, 10);
 
@@ -802,7 +802,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 39 "./Parser/Lexer.lm"
+#line 37 "./Source/Lexer.lm"
 {
     yylval->stringValue = strdup(yytext);
 
@@ -813,14 +813,19 @@ YY_RULE_SETUP
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 47 "./Parser/Lexer.lm"
+#line 45 "./Source/Lexer.lm"
 {
     // Do nothing
 }
 	YY_BREAK
+/**
+   this is can act as default rule when %nodefault is enabled: just echo unknown input and do nothing
+   
+   . ECHO;
+   \n ECHO;
+  */
 case YY_STATE_EOF(INITIAL):
-case YY_STATE_EOF(LEXING_ERROR):
-#line 51 "./Parser/Lexer.lm"
+#line 56 "./Source/Lexer.lm"
 {
     printf("<<EOF>>\n");
 
@@ -829,10 +834,10 @@ case YY_STATE_EOF(LEXING_ERROR):
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 57 "./Parser/Lexer.lm"
-YY_FATAL_ERROR( "flex scanner jammed" );
+#line 62 "./Source/Lexer.lm"
+ECHO;
 	YY_BREAK
-#line 836 "./Parser/Generated Code/lexer.m"
+#line 841 "./Generated-Code/Lexer.m"
 
 	case YY_END_OF_BUFFER:
 		{
@@ -1125,7 +1130,7 @@ static int yy_get_next_buffer (yyscan_t yyscanner)
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 13 )
+			if ( yy_current_state >= 11 )
 				yy_c = yy_meta[(unsigned int) yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
@@ -1154,11 +1159,11 @@ static int yy_get_next_buffer (yyscan_t yyscanner)
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 13 )
+		if ( yy_current_state >= 11 )
 			yy_c = yy_meta[(unsigned int) yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
-	yy_is_jam = (yy_current_state == 12);
+	yy_is_jam = (yy_current_state == 10);
 
 	(void)yyg;
 	return yy_is_jam ? 0 : yy_current_state;
@@ -1973,7 +1978,7 @@ void yyfree (void * ptr , yyscan_t yyscanner)
 
 #define YYTABLES_NAME "yytables"
 
-#line 57 "./Parser/Lexer.lm"
+#line 62 "./Source/Lexer.lm"
 
 
 

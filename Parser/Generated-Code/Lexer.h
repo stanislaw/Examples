@@ -2,9 +2,9 @@
 #define yyHEADER_H 1
 #define yyIN_HEADER 1
 
-#line 6 "./Parser/Generated Code/lexer.h"
+#line 6 "./Generated-Code/Lexer.h"
 
-#line 8 "./Parser/Generated Code/lexer.h"
+#line 8 "./Generated-Code/Lexer.h"
 
 #define  YY_INT_ALIGNED short int
 
@@ -229,7 +229,6 @@ void yyfree (void * ,yyscan_t yyscanner );
 
 #ifdef YY_HEADER_EXPORT_START_CONDITIONS
 #define INITIAL 0
-#define LEXING_ERROR 1
 
 #endif
 
@@ -352,9 +351,9 @@ extern int yylex \
 #undef YY_DECL
 #endif
 
-#line 57 "./Parser/Lexer.lm"
+#line 62 "./Source/Lexer.lm"
 
 
-#line 359 "./Parser/Generated Code/lexer.h"
+#line 358 "./Generated-Code/Lexer.h"
 #undef yyIN_HEADER
 #endif /* yyHEADER_H */
