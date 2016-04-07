@@ -15,7 +15,18 @@ git clone git@github.com:stanislaw/Examples.git --branch 20160328-reentrant-pars
 
 - Xcode 7, Objective-C, Flex and Bison
 
-- `bin/` folder contains latest Flex and Bison binaries obtained using homebrew because default OSX bison is 2006 old. See also [What is the reason for some of the Linux tools on OS X being so old? Is this related to GPL licensing?](https://www.quora.com/What-is-the-reason-for-some-of-the-Linux-tools-on-OS-X-being-so-old-Is-this-related-to-GPL-licensing).
+- Latest Flex and Bison binaries obtained using homebrew because default OSX bison is 2006 old. See also [What is the reason for some of the Linux tools on OS X being so old? Is this related to GPL licensing?](https://www.quora.com/What-is-the-reason-for-some-of-the-Linux-tools-on-OS-X-being-so-old-Is-this-related-to-GPL-licensing).
+
+    # `brew link` is needed to link against these new versions instead of default Xcode because both flex and bison are keg-only
+    # See http://stackoverflow.com/questions/17015285/understand-homebrew-and-keg-only-dependencies for details
+    #
+    # brew install flex && brew link flex --force
+    # brew install bison && brew link bison --force
+    # it is important to then explicitly specify
+    # full path:
+    # /usr/local/bin/flex
+    # /usr/local/bin/bison
+    # because Xcode has its own environment with 10-year-old GNU tools enabled
 
 - Parser generation is written in Makefile and thus happens outside of Xcode. The make invocation is included to Xcode project as Run Script Build Phase.
 
