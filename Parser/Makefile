@@ -3,6 +3,9 @@ PARSER_FILES=$(wildcard $(PARSER_PATH)/*)
 
 OUT_PATH=./Generated-Code
 
+# `brew link` is needed to link against these new versions instead of default Xcode because both flex and bison are keg-only
+# See http://stackoverflow.com/questions/17015285/understand-homebrew-and-keg-only-dependencies for details
+#
 # brew install flex && brew link flex --force
 # brew install bison && brew link bison --force
 # it is important to then explicitly specify
