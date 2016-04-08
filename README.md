@@ -54,5 +54,13 @@ Original StackOverflow topic: [How to detect partial unfinished token and join i
 
 Original StackOverflow topic: [Problems with reentrant flex and bison](http://stackoverflow.com/questions/32535097/problems-with-reentrant-flex-and-bison).
 
+### 2016-04-09 How to integrate Make-based subproject into Xcode
+
+[Demo project](https://github.com/stanislaw/Examples/tree/20160408-xcode-and-make)
+
+Original StackOverflow topic: [Xcode Build Phase Input Folder](http://stackoverflow.com/questions/36425619/xcode-build-phase-input-folder).
+
+
+
 
 
