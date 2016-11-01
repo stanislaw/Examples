@@ -60,6 +60,11 @@ Original StackOverflow topic: [Problems with reentrant flex and bison](http://st
 
 Original StackOverflow topic: [Xcode Build Phase Input Folder](http://stackoverflow.com/questions/36425619/xcode-build-phase-input-folder).
 
+### 2016-11-01 Flex, Bison, C++ all in Xcode
+
+[Demo project](https://github.com/stanislaw/Examples/tree/20161101-flex-cpp-example).
+
+Original StackOverflow topic: [Flex, Bison, C++ all in Xcode](https://github.com/stanislaw/Examples/tree/20161101-flex-cpp-example).
 
 
 
