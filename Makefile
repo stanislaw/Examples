@@ -5,8 +5,10 @@ clean:
 	mkdir -p './Parser/Generated Code'
 
 flex:
-	./bin/flex ./Parser/Lexer.lm
+	# brew install flex
+	/usr/local/bin/flex ./Parser/Lexer.lm
 
 bison:
-	./bin/bison -d ./Parser/Parser.ym
+	# brew install bison
+	/usr/local/bin/bison -d ./Parser/Parser.ym
 

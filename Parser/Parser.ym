@@ -1,22 +1,25 @@
 
 %{
-    #import "ParserConsumer.h"
 
-    #import "parser.h"
-    #import "lexer.h"
+#include <iostream>
+#include <cstdio>
 
-    void yyerror(void *scanner, id <ParserConsumer> consumer, const char *msg);
+#include "ParserConsumer.h"
+
+#include "parser.hpp"
+#include "lexer.hpp"
+
+int yylex();
+void yyerror(id <ParserConsumer> consumer, const char *msg);
+
 %}
 
-%output  "Parser/Generated Code/parser.m"
-%defines "Parser/Generated Code/parser.h"
+%output  "Parser/Generated Code/parser.mm"
+%defines "Parser/Generated Code/parser.hpp"
 
-%define api.pure full
+  //%define api.pure full
 %define parse.error verbose
 
-%lex-param { void *scanner }
-
-%parse-param { void *scanner }
 %parse-param { id <ParserConsumer> consumer }
 
 %union {
@@ -35,6 +38,9 @@ tokens: /* empty */
 
 token:
     Token_String {
+
+        std::cout << "Parser says: Hello from C++\n";
+
         printf("[Parser, string] %s\n", $1);
 
         [consumer parserDidParseString:$1];

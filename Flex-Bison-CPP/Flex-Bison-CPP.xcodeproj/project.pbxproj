@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8630F4DC1CA99FD300E2CEA3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8630F4DB1CA99FD300E2CEA3 /* main.m */; };
-		8630F4F11CA9A3E900E2CEA3 /* lexer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8630F4EE1CA9A3E900E2CEA3 /* lexer.m */; };
-		8630F4F21CA9A3E900E2CEA3 /* parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8630F4F01CA9A3E900E2CEA3 /* parser.m */; };
+		8658B4C21DC8CF7600532059 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8658B4C11DC8CF7600532059 /* main.mm */; };
+		8658B4D11DC8CFBA00532059 /* lexer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8658B4CB1DC8CFBA00532059 /* lexer.mm */; };
+		8658B4D21DC8CFBA00532059 /* parser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8658B4CD1DC8CFBA00532059 /* parser.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		8630F4D61CA99FD300E2CEA3 /* CopyFiles */ = {
+		8658B4BC1DC8CF7600532059 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -25,19 +25,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8630F4D81CA99FD300E2CEA3 /* Reentrant-Parser-Using-Flex-and-Bison */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Reentrant-Parser-Using-Flex-and-Bison"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8630F4DB1CA99FD300E2CEA3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8630F4E51CA9A08C00E2CEA3 /* Lexer.lm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; path = Lexer.lm; sourceTree = "<group>"; };
-		8630F4E61CA9A08C00E2CEA3 /* Parser.ym */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.yacc; path = Parser.ym; sourceTree = "<group>"; };
-		8630F4E71CA9A08C00E2CEA3 /* ParserConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParserConsumer.h; sourceTree = "<group>"; };
-		8630F4ED1CA9A3E900E2CEA3 /* lexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lexer.h; sourceTree = "<group>"; };
-		8630F4EE1CA9A3E900E2CEA3 /* lexer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lexer.m; sourceTree = "<group>"; };
-		8630F4EF1CA9A3E900E2CEA3 /* parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parser.h; sourceTree = "<group>"; };
-		8630F4F01CA9A3E900E2CEA3 /* parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = parser.m; sourceTree = "<group>"; };
+		8658B4BE1DC8CF7600532059 /* Flex-Bison-CPP */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Flex-Bison-CPP"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8658B4C11DC8CF7600532059 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		8658B4CA1DC8CFBA00532059 /* lexer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lexer.hpp; sourceTree = "<group>"; };
+		8658B4CB1DC8CFBA00532059 /* lexer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = lexer.mm; sourceTree = "<group>"; };
+		8658B4CC1DC8CFBA00532059 /* parser.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = parser.hpp; sourceTree = "<group>"; };
+		8658B4CD1DC8CFBA00532059 /* parser.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = parser.mm; sourceTree = "<group>"; };
+		8658B4CE1DC8CFBA00532059 /* Lexer.lm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; path = Lexer.lm; sourceTree = "<group>"; };
+		8658B4CF1DC8CFBA00532059 /* Parser.ym */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.yacc; path = Parser.ym; sourceTree = "<group>"; };
+		8658B4D01DC8CFBA00532059 /* ParserConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParserConsumer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8630F4D51CA99FD300E2CEA3 /* Frameworks */ = {
+		8658B4BB1DC8CF7600532059 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -47,50 +47,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8630F4CF1CA99FD200E2CEA3 = {
+		8658B4B51DC8CF7600532059 = {
 			isa = PBXGroup;
 			children = (
-				8630F4E21CA9A08C00E2CEA3 /* Parser */,
-				8630F4DA1CA99FD300E2CEA3 /* Reentrant-Parser-Using-Flex-and-Bison */,
-				8630F4D91CA99FD300E2CEA3 /* Products */,
+				8658B4C81DC8CFBA00532059 /* Parser */,
+				8658B4C01DC8CF7600532059 /* Flex-Bison-CPP */,
+				8658B4BF1DC8CF7600532059 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		8630F4D91CA99FD300E2CEA3 /* Products */ = {
+		8658B4BF1DC8CF7600532059 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8630F4D81CA99FD300E2CEA3 /* Reentrant-Parser-Using-Flex-and-Bison */,
+				8658B4BE1DC8CF7600532059 /* Flex-Bison-CPP */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8630F4DA1CA99FD300E2CEA3 /* Reentrant-Parser-Using-Flex-and-Bison */ = {
+		8658B4C01DC8CF7600532059 /* Flex-Bison-CPP */ = {
 			isa = PBXGroup;
 			children = (
-				8630F4DB1CA99FD300E2CEA3 /* main.m */,
+				8658B4C11DC8CF7600532059 /* main.mm */,
 			);
-			path = "Reentrant-Parser-Using-Flex-and-Bison";
+			path = "Flex-Bison-CPP";
 			sourceTree = "<group>";
 		};
-		8630F4E21CA9A08C00E2CEA3 /* Parser */ = {
+		8658B4C81DC8CFBA00532059 /* Parser */ = {
 			isa = PBXGroup;
 			children = (
-				8630F4EC1CA9A3E900E2CEA3 /* Generated Code */,
-				8630F4E51CA9A08C00E2CEA3 /* Lexer.lm */,
-				8630F4E61CA9A08C00E2CEA3 /* Parser.ym */,
-				8630F4E71CA9A08C00E2CEA3 /* ParserConsumer.h */,
+				8658B4C91DC8CFBA00532059 /* Generated Code */,
+				8658B4CE1DC8CFBA00532059 /* Lexer.lm */,
+				8658B4CF1DC8CFBA00532059 /* Parser.ym */,
+				8658B4D01DC8CFBA00532059 /* ParserConsumer.h */,
 			);
 			name = Parser;
 			path = ../Parser;
 			sourceTree = "<group>";
 		};
-		8630F4EC1CA9A3E900E2CEA3 /* Generated Code */ = {
+		8658B4C91DC8CFBA00532059 /* Generated Code */ = {
 			isa = PBXGroup;
 			children = (
-				8630F4ED1CA9A3E900E2CEA3 /* lexer.h */,
-				8630F4EE1CA9A3E900E2CEA3 /* lexer.m */,
-				8630F4EF1CA9A3E900E2CEA3 /* parser.h */,
-				8630F4F01CA9A3E900E2CEA3 /* parser.m */,
+				8658B4CA1DC8CFBA00532059 /* lexer.hpp */,
+				8658B4CB1DC8CFBA00532059 /* lexer.mm */,
+				8658B4CC1DC8CFBA00532059 /* parser.hpp */,
+				8658B4CD1DC8CFBA00532059 /* parser.mm */,
 			);
 			path = "Generated Code";
 			sourceTree = "<group>";
@@ -98,90 +98,93 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8630F4D71CA99FD300E2CEA3 /* Reentrant-Parser-Using-Flex-and-Bison */ = {
+		8658B4BD1DC8CF7600532059 /* Flex-Bison-CPP */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8630F4DF1CA99FD300E2CEA3 /* Build configuration list for PBXNativeTarget "Reentrant-Parser-Using-Flex-and-Bison" */;
+			buildConfigurationList = 8658B4C51DC8CF7600532059 /* Build configuration list for PBXNativeTarget "Flex-Bison-CPP" */;
 			buildPhases = (
-				8630F4F31CA9A4E800E2CEA3 /* Parser Generation: Flex -> Bison */,
-				8630F4D41CA99FD300E2CEA3 /* Sources */,
-				8630F4D51CA99FD300E2CEA3 /* Frameworks */,
-				8630F4D61CA99FD300E2CEA3 /* CopyFiles */,
+				8658B4D51DC8CFC800532059 /* Flex / Bison */,
+				8658B4BA1DC8CF7600532059 /* Sources */,
+				8658B4BB1DC8CF7600532059 /* Frameworks */,
+				8658B4BC1DC8CF7600532059 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Reentrant-Parser-Using-Flex-and-Bison";
-			productName = "Reentrant-Parser-Using-Flex-and-Bison";
-			productReference = 8630F4D81CA99FD300E2CEA3 /* Reentrant-Parser-Using-Flex-and-Bison */;
+			name = "Flex-Bison-CPP";
+			productName = "Flex-Bison-CPP";
+			productReference = 8658B4BE1DC8CF7600532059 /* Flex-Bison-CPP */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		8630F4D01CA99FD200E2CEA3 /* Project object */ = {
+		8658B4B61DC8CF7600532059 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
-				ORGANIZATIONNAME = "Stanislaw Pankevich";
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Stanislav Pankevich";
 				TargetAttributes = {
-					8630F4D71CA99FD300E2CEA3 = {
-						CreatedOnToolsVersion = 7.2.1;
+					8658B4BD1DC8CF7600532059 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 399ZF6384C;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 8630F4D31CA99FD200E2CEA3 /* Build configuration list for PBXProject "Reentrant-Parser-Using-Flex-and-Bison" */;
+			buildConfigurationList = 8658B4B91DC8CF7600532059 /* Build configuration list for PBXProject "Flex-Bison-CPP" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 8630F4CF1CA99FD200E2CEA3;
-			productRefGroup = 8630F4D91CA99FD300E2CEA3 /* Products */;
+			mainGroup = 8658B4B51DC8CF7600532059;
+			productRefGroup = 8658B4BF1DC8CF7600532059 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8630F4D71CA99FD300E2CEA3 /* Reentrant-Parser-Using-Flex-and-Bison */,
+				8658B4BD1DC8CF7600532059 /* Flex-Bison-CPP */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8630F4F31CA9A4E800E2CEA3 /* Parser Generation: Flex -> Bison */ = {
+		8658B4D51DC8CFC800532059 /* Flex / Bison */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Parser Generation: Flex -> Bison";
+			name = "Flex / Bison";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd ../\nmake\n";
+			shellScript = "cd ../\nmake";
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8630F4D41CA99FD300E2CEA3 /* Sources */ = {
+		8658B4BA1DC8CF7600532059 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8630F4F21CA9A3E900E2CEA3 /* parser.m in Sources */,
-				8630F4F11CA9A3E900E2CEA3 /* lexer.m in Sources */,
-				8630F4DC1CA99FD300E2CEA3 /* main.m in Sources */,
+				8658B4D11DC8CFBA00532059 /* lexer.mm in Sources */,
+				8658B4C21DC8CF7600532059 /* main.mm in Sources */,
+				8658B4D21DC8CFBA00532059 /* parser.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		8630F4DD1CA99FD300E2CEA3 /* Debug */ = {
+		8658B4C31DC8CF7600532059 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -189,10 +192,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -221,10 +227,11 @@
 			};
 			name = Debug;
 		};
-		8630F4DE1CA99FD300E2CEA3 /* Release */ = {
+		8658B4C41DC8CF7600532059 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -232,10 +239,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -257,16 +267,18 @@
 			};
 			name = Release;
 		};
-		8630F4E01CA99FD300E2CEA3 /* Debug */ = {
+		8658B4C61DC8CF7600532059 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 399ZF6384C;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		8630F4E11CA99FD300E2CEA3 /* Release */ = {
+		8658B4C71DC8CF7600532059 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 399ZF6384C;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -274,25 +286,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8630F4D31CA99FD200E2CEA3 /* Build configuration list for PBXProject "Reentrant-Parser-Using-Flex-and-Bison" */ = {
+		8658B4B91DC8CF7600532059 /* Build configuration list for PBXProject "Flex-Bison-CPP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8630F4DD1CA99FD300E2CEA3 /* Debug */,
-				8630F4DE1CA99FD300E2CEA3 /* Release */,
+				8658B4C31DC8CF7600532059 /* Debug */,
+				8658B4C41DC8CF7600532059 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8630F4DF1CA99FD300E2CEA3 /* Build configuration list for PBXNativeTarget "Reentrant-Parser-Using-Flex-and-Bison" */ = {
+		8658B4C51DC8CF7600532059 /* Build configuration list for PBXNativeTarget "Flex-Bison-CPP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8630F4E01CA99FD300E2CEA3 /* Debug */,
-				8630F4E11CA99FD300E2CEA3 /* Release */,
+				8658B4C61DC8CF7600532059 /* Debug */,
+				8658B4C71DC8CF7600532059 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 8630F4D01CA99FD200E2CEA3 /* Project object */;
+	rootObject = 8658B4B61DC8CF7600532059 /* Project object */;
 }

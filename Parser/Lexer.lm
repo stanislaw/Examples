@@ -1,23 +1,29 @@
 %{
 
-#import "ParserConsumer.h"
-#import "parser.h"
+#include "ParserConsumer.h"
+#include "parser.hpp"
+
+#include <iostream>
+#include <cstdio>
+
+int yylex(void);
+void yyerror(id <ParserConsumer> consumer, const char *msg);
 
 %}
 
-%option header-file = "./Parser/Generated Code/lexer.h"
-%option outfile     = "./Parser/Generated Code/lexer.m"
+%option header-file = "./Parser/Generated Code/lexer.hpp"
+%option outfile     = "./Parser/Generated Code/lexer.mm"
 
-%option 8bit
-%option bison-bridge
+  //%option 8bit
+  //%option bison-bridge
   //%option debug
-%option pointer
-%option nodefault
-%option noinput
-%option nounput
+  //%option pointer
+  //%option nodefault
+  //%option noinput
+  //%option nounput
 %option noyywrap
-%option reentrant
-%option warn
+  //%option reentrant
+  //%option warn
 
 %x LEXING_ERROR
   /*%x CONTROL_SYMBOL*/
@@ -29,15 +35,16 @@ SPACE \x20
 %%
 
 {NUMBER} {
-    yylval->numericValue = (int)strtoul(yytext, NULL, 10);
+    yylval.numericValue = (int)strtoul(yytext, NULL, 10);
 
+    std::cout << "Lexer says: Hello from C++\n";
     printf("[Lexer, number] %s\n", yytext);
 
     return Token_Number;
 }
 
 {STRING} {
-    yylval->stringValue = strdup(yytext);
+    yylval.stringValue = strdup(yytext);
 
     printf("[Lexer, string] %s\n", yytext);
 
@@ -56,8 +63,8 @@ SPACE \x20
 
 %%
 
-void yyerror (void *scanner, id <ParserConsumer> consumer, const char *msg) {
-    printf(stderr, "%s\n", msg);
+void yyerror (id <ParserConsumer> consumer, const char *msg) {
+    printf("%s\n", msg);
 
     abort();
 }

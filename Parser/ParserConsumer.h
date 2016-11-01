@@ -6,7 +6,7 @@
 //  Copyright © 2015 Stanislaw Pankevich. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#include <Foundation/Foundation.h>
 
 @protocol ParserConsumer <NSObject>
 

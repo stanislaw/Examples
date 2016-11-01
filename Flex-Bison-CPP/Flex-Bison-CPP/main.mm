@@ -6,12 +6,15 @@
 //  Copyright © 2016 Stanislaw Pankevich. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#include <Foundation/Foundation.h>
 
-#import "ParserConsumer.h"
+#include "ParserConsumer.h"
 
-#import "parser.h"
-#import "lexer.h"
+#include "parser.hpp"
+#include "lexer.hpp"
+
+extern YY_BUFFER_STATE yy_scan_string(const char * str);
+extern void yy_delete_buffer(YY_BUFFER_STATE buffer);
 
 @interface ParserConsumer : NSObject <ParserConsumer>
 @end
@@ -32,19 +35,11 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         ParserConsumer *parserConsumer = [ParserConsumer new];
 
-        yyscan_t scanner;
-
-        if (yylex_init(&scanner)) {
-            perror("yylex_init error");
-        }
-
         char input[] = "RAINBOW UNICORN 1234 UNICORN";
 
-        yy_scan_string(input, scanner);
-
-        yyparse(scanner, parserConsumer);
-
-        yylex_destroy(scanner);
+        YY_BUFFER_STATE state = yy_scan_string(input);
+        yyparse(parserConsumer);
+        yy_delete_buffer(state);
     }
 
     return 0;

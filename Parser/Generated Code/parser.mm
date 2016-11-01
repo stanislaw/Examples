@@ -50,7 +50,7 @@
 #define YYSKELETON_NAME "yacc.c"
 
 /* Pure parsers.  */
-#define YYPURE 2
+#define YYPURE 0
 
 /* Push parsers.  */
 #define YYPUSH 0
@@ -64,14 +64,20 @@
 /* Copy the first part of user declarations.  */
 #line 2 "./Parser/Parser.ym" /* yacc.c:339  */
 
-    #import "ParserConsumer.h"
 
-    #import "parser.h"
-    #import "lexer.h"
+#include <iostream>
+#include <cstdio>
 
-    void yyerror(void *scanner, id <ParserConsumer> consumer, const char *msg);
+#include "ParserConsumer.h"
 
-#line 75 "Parser/Generated Code/parser.m" /* yacc.c:339  */
+#include "parser.hpp"
+#include "lexer.hpp"
+
+int yylex();
+void yyerror(id <ParserConsumer> consumer, const char *msg);
+
+
+#line 81 "Parser/Generated Code/parser.mm" /* yacc.c:339  */
 
 # ifndef YY_NULLPTR
 #  if defined __cplusplus && 201103L <= __cplusplus
@@ -90,9 +96,9 @@
 #endif
 
 /* In a future release of Bison, this section will be replaced
-   by #include "parser.h".  */
-#ifndef YY_YY_PARSER_GENERATED_CODE_PARSER_H_INCLUDED
-# define YY_YY_PARSER_GENERATED_CODE_PARSER_H_INCLUDED
+   by #include "parser.hpp".  */
+#ifndef YY_YY_PARSER_GENERATED_CODE_PARSER_HPP_INCLUDED
+# define YY_YY_PARSER_GENERATED_CODE_PARSER_HPP_INCLUDED
 /* Debug traces.  */
 #ifndef YYDEBUG
 # define YYDEBUG 0
@@ -116,12 +122,12 @@ extern int yydebug;
 
 union YYSTYPE
 {
-#line 22 "./Parser/Parser.ym" /* yacc.c:355  */
+#line 25 "./Parser/Parser.ym" /* yacc.c:355  */
 
     char *stringValue;
     int numericValue;
 
-#line 125 "Parser/Generated Code/parser.m" /* yacc.c:355  */
+#line 131 "Parser/Generated Code/parser.mm" /* yacc.c:355  */
 };
 
 typedef union YYSTYPE YYSTYPE;
@@ -130,14 +136,15 @@ typedef union YYSTYPE YYSTYPE;
 #endif
 
 
+extern YYSTYPE yylval;
 
-int yyparse (void *scanner, id <ParserConsumer> consumer);
+int yyparse (id <ParserConsumer> consumer);
 
-#endif /* !YY_YY_PARSER_GENERATED_CODE_PARSER_H_INCLUDED  */
+#endif /* !YY_YY_PARSER_GENERATED_CODE_PARSER_HPP_INCLUDED  */
 
 /* Copy the second part of user declarations.  */
 
-#line 141 "Parser/Generated Code/parser.m" /* yacc.c:358  */
+#line 148 "Parser/Generated Code/parser.mm" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -434,7 +441,7 @@ static const yytype_uint8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    33,    33,    34,    37,    44
+       0,    36,    36,    37,    40,    50
 };
 #endif
 
@@ -551,7 +558,7 @@ do                                                              \
     }                                                           \
   else                                                          \
     {                                                           \
-      yyerror (scanner, consumer, YY_("syntax error: cannot back up")); \
+      yyerror (consumer, YY_("syntax error: cannot back up")); \
       YYERROR;                                                  \
     }                                                           \
 while (0)
@@ -588,7 +595,7 @@ do {                                                                      \
     {                                                                     \
       YYFPRINTF (stderr, "%s ", Title);                                   \
       yy_symbol_print (stderr,                                            \
-                  Type, Value, scanner, consumer); \
+                  Type, Value, consumer); \
       YYFPRINTF (stderr, "\n");                                           \
     }                                                                     \
 } while (0)
@@ -599,11 +606,10 @@ do {                                                                      \
 `----------------------------------------*/
 
 static void
-yy_symbol_value_print (FILE *yyoutput, int yytype, YYSTYPE const * const yyvaluep, void *scanner, id <ParserConsumer> consumer)
+yy_symbol_value_print (FILE *yyoutput, int yytype, YYSTYPE const * const yyvaluep, id <ParserConsumer> consumer)
 {
   FILE *yyo = yyoutput;
   YYUSE (yyo);
-  YYUSE (scanner);
   YYUSE (consumer);
   if (!yyvaluep)
     return;
@@ -620,12 +626,12 @@ yy_symbol_value_print (FILE *yyoutput, int yytype, YYSTYPE const * const yyvalue
 `--------------------------------*/
 
 static void
-yy_symbol_print (FILE *yyoutput, int yytype, YYSTYPE const * const yyvaluep, void *scanner, id <ParserConsumer> consumer)
+yy_symbol_print (FILE *yyoutput, int yytype, YYSTYPE const * const yyvaluep, id <ParserConsumer> consumer)
 {
   YYFPRINTF (yyoutput, "%s %s (",
              yytype < YYNTOKENS ? "token" : "nterm", yytname[yytype]);
 
-  yy_symbol_value_print (yyoutput, yytype, yyvaluep, scanner, consumer);
+  yy_symbol_value_print (yyoutput, yytype, yyvaluep, consumer);
   YYFPRINTF (yyoutput, ")");
 }
 
@@ -658,7 +664,7 @@ do {                                                            \
 `------------------------------------------------*/
 
 static void
-yy_reduce_print (yytype_int16 *yyssp, YYSTYPE *yyvsp, int yyrule, void *scanner, id <ParserConsumer> consumer)
+yy_reduce_print (yytype_int16 *yyssp, YYSTYPE *yyvsp, int yyrule, id <ParserConsumer> consumer)
 {
   unsigned long int yylno = yyrline[yyrule];
   int yynrhs = yyr2[yyrule];
@@ -672,7 +678,7 @@ yy_reduce_print (yytype_int16 *yyssp, YYSTYPE *yyvsp, int yyrule, void *scanner,
       yy_symbol_print (stderr,
                        yystos[yyssp[yyi + 1 - yynrhs]],
                        &(yyvsp[(yyi + 1) - (yynrhs)])
-                                              , scanner, consumer);
+                                              , consumer);
       YYFPRINTF (stderr, "\n");
     }
 }
@@ -680,7 +686,7 @@ yy_reduce_print (yytype_int16 *yyssp, YYSTYPE *yyvsp, int yyrule, void *scanner,
 # define YY_REDUCE_PRINT(Rule)          \
 do {                                    \
   if (yydebug)                          \
-    yy_reduce_print (yyssp, yyvsp, Rule, scanner, consumer); \
+    yy_reduce_print (yyssp, yyvsp, Rule, consumer); \
 } while (0)
 
 /* Nonzero means print parse trace.  It is left uninitialized so that
@@ -938,10 +944,9 @@ yysyntax_error (YYSIZE_T *yymsg_alloc, char **yymsg,
 `-----------------------------------------------*/
 
 static void
-yydestruct (const char *yymsg, int yytype, YYSTYPE *yyvaluep, void *scanner, id <ParserConsumer> consumer)
+yydestruct (const char *yymsg, int yytype, YYSTYPE *yyvaluep, id <ParserConsumer> consumer)
 {
   YYUSE (yyvaluep);
-  YYUSE (scanner);
   YYUSE (consumer);
   if (!yymsg)
     yymsg = "Deleting";
@@ -955,26 +960,22 @@ yydestruct (const char *yymsg, int yytype, YYSTYPE *yyvaluep, void *scanner, id 
 
 
 
+/* The lookahead symbol.  */
+int yychar;
+
+/* The semantic value of the lookahead symbol.  */
+YYSTYPE yylval;
+/* Number of syntax errors so far.  */
+int yynerrs;
+
+
 /*----------.
 | yyparse.  |
 `----------*/
 
 int
-yyparse (void *scanner, id <ParserConsumer> consumer)
+yyparse (id <ParserConsumer> consumer)
 {
-/* The lookahead symbol.  */
-int yychar;
-
-
-/* The semantic value of the lookahead symbol.  */
-/* Default value used for initialization, for pacifying older GCCs
-   or non-GCC compilers.  */
-YY_INITIAL_VALUE (static YYSTYPE yyval_default;)
-YYSTYPE yylval YY_INITIAL_VALUE (= yyval_default);
-
-    /* Number of syntax errors so far.  */
-    int yynerrs;
-
     int yystate;
     /* Number of tokens to shift before error messages enabled.  */
     int yyerrstatus;
@@ -1129,7 +1130,7 @@ yybackup:
   if (yychar == YYEMPTY)
     {
       YYDPRINTF ((stderr, "Reading a token: "));
-      yychar = yylex (&yylval, scanner);
+      yychar = yylex ();
     }
 
   if (yychar <= YYEOF)
@@ -1208,29 +1209,32 @@ yyreduce:
   switch (yyn)
     {
         case 4:
-#line 37 "./Parser/Parser.ym" /* yacc.c:1661  */
+#line 40 "./Parser/Parser.ym" /* yacc.c:1661  */
     {
+
+        std::cout << "Parser says: Hello from C++\n";
+
         printf("[Parser, string] %s\n", (yyvsp[0].stringValue));
 
         [consumer parserDidParseString:(yyvsp[0].stringValue)];
 
         free((yyvsp[0].stringValue));
     }
-#line 1220 "Parser/Generated Code/parser.m" /* yacc.c:1661  */
+#line 1224 "Parser/Generated Code/parser.mm" /* yacc.c:1661  */
     break;
 
   case 5:
-#line 44 "./Parser/Parser.ym" /* yacc.c:1661  */
+#line 50 "./Parser/Parser.ym" /* yacc.c:1661  */
     {
         printf("[Parser, number]\n");
 
         [consumer parserDidParseNumber:(yyvsp[0].numericValue)];
     }
-#line 1230 "Parser/Generated Code/parser.m" /* yacc.c:1661  */
+#line 1234 "Parser/Generated Code/parser.mm" /* yacc.c:1661  */
     break;
 
 
-#line 1234 "Parser/Generated Code/parser.m" /* yacc.c:1661  */
+#line 1238 "Parser/Generated Code/parser.mm" /* yacc.c:1661  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1280,7 +1284,7 @@ yyerrlab:
     {
       ++yynerrs;
 #if ! YYERROR_VERBOSE
-      yyerror (scanner, consumer, YY_("syntax error"));
+      yyerror (consumer, YY_("syntax error"));
 #else
 # define YYSYNTAX_ERROR yysyntax_error (&yymsg_alloc, &yymsg, \
                                         yyssp, yytoken)
@@ -1307,7 +1311,7 @@ yyerrlab:
                 yymsgp = yymsg;
               }
           }
-        yyerror (scanner, consumer, yymsgp);
+        yyerror (consumer, yymsgp);
         if (yysyntax_error_status == 2)
           goto yyexhaustedlab;
       }
@@ -1331,7 +1335,7 @@ yyerrlab:
       else
         {
           yydestruct ("Error: discarding",
-                      yytoken, &yylval, scanner, consumer);
+                      yytoken, &yylval, consumer);
           yychar = YYEMPTY;
         }
     }
@@ -1387,7 +1391,7 @@ yyerrlab1:
 
 
       yydestruct ("Error: popping",
-                  yystos[yystate], yyvsp, scanner, consumer);
+                  yystos[yystate], yyvsp, consumer);
       YYPOPSTACK (1);
       yystate = *yyssp;
       YY_STACK_PRINT (yyss, yyssp);
@@ -1424,7 +1428,7 @@ yyabortlab:
 | yyexhaustedlab -- memory exhaustion comes here.  |
 `-------------------------------------------------*/
 yyexhaustedlab:
-  yyerror (scanner, consumer, YY_("memory exhausted"));
+  yyerror (consumer, YY_("memory exhausted"));
   yyresult = 2;
   /* Fall through.  */
 #endif
@@ -1436,7 +1440,7 @@ yyreturn:
          user semantic actions for why this is necessary.  */
       yytoken = YYTRANSLATE (yychar);
       yydestruct ("Cleanup: discarding lookahead",
-                  yytoken, &yylval, scanner, consumer);
+                  yytoken, &yylval, consumer);
     }
   /* Do not reclaim the symbols of the rule whose action triggered
      this YYABORT or YYACCEPT.  */
@@ -1445,7 +1449,7 @@ yyreturn:
   while (yyssp != yyss)
     {
       yydestruct ("Cleanup: popping",
-                  yystos[*yyssp], yyvsp, scanner, consumer);
+                  yystos[*yyssp], yyvsp, consumer);
       YYPOPSTACK (1);
     }
 #ifndef yyoverflow
@@ -1458,5 +1462,5 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 49 "./Parser/Parser.ym" /* yacc.c:1906  */
+#line 55 "./Parser/Parser.ym" /* yacc.c:1906  */
 
