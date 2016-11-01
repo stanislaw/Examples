@@ -210,7 +210,6 @@ extern char *yytext;
 
 #ifdef YY_HEADER_EXPORT_START_CONDITIONS
 #define INITIAL 0
-#define LEXING_ERROR 1
 
 #endif
 
@@ -319,9 +318,9 @@ extern int yylex (void);
 #undef YY_DECL
 #endif
 
-#line 65 "./Parser/Lexer.lm"
+#line 51 "./Parser/Lexer.lm"
 
 
-#line 325 "./Parser/Generated Code/lexer.hpp"
+#line 324 "./Parser/Generated Code/lexer.hpp"
 #undef yyIN_HEADER
 #endif /* yyHEADER_H */
