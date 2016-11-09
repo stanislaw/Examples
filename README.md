@@ -66,6 +66,11 @@ Original StackOverflow topic: [Xcode Build Phase Input Folder](http://stackoverf
 
 Original StackOverflow topic: [Flex, Bison, C++ all in Xcode](https://github.com/stanislaw/Examples/tree/20161101-flex-cpp-example).
 
+### 2016-11-09 -[NSURLCache currentDiskUsage] doesn't show actual disk usage (or behavior is not documented). 
+
+[Demo project](https://github.com/stanislaw/Examples/tree/20161109-nsurlcache-weird-behavior-of-currentDiskUsage).
+
+Radar: [-[NSURLCache currentDiskUsage] doesn't show actual disk usage (or behavior is not documented).](http://www.openradar.appspot.com/radar?id=4508717231898624).
 
 
 
