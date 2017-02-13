@@ -80,18 +80,17 @@ func RunXCTests() -> Int {
 
   var testSuites = [defaultSuite]
   while let testSuite = testSuites.popLast() {
-    print("Test suite: \(testSuite)")
-
     for testOrSuite in testSuite.tests {
       if let test = testOrSuite as? XCTestCase {
-        /// Test should have `test_focus` in it to initiate a
-        /// focused testing.
+        /// Test should have `_focus` to be included to the focused test suite.
         if let testName = test.name, testName.contains("_focus_") {
           focusedTestSuite.addTest(test)
         }
       }
 
       else if let testSuite = testOrSuite as? XCTestSuite {
+        /// Test class should have `Focus` in its name to be included to the
+        /// focused test suite.
         if let testSuiteName = testSuite.name, testSuiteName.contains("Focus") {
           focusedTestSuite.addTest(testSuite)
         } else {
