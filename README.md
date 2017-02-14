@@ -72,5 +72,9 @@ Original StackOverflow topic: [Flex, Bison, C++ all in Xcode](https://github.com
 
 Radar: [-[NSURLCache currentDiskUsage] doesn't show actual disk usage (or behavior is not documented).](http://www.openradar.appspot.com/radar?id=4508717231898624).
 
+### 2017-02-14 XCTest: focused tests
 
+[Demo project](https://github.com/stanislaw/Examples/tree/20170213-focused-xctest).
+
+My post: [XCTest: focused tests](http://stanislaw.github.io/2017/02/15/focused-xctest.html).
 
