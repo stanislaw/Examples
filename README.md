@@ -78,3 +78,9 @@ Radar: [-[NSURLCache currentDiskUsage] doesn't show actual disk usage (or behavi
 
 My post: [XCTest: focused tests](http://stanislaw.github.io/2017/02/15/focused-xctest.html).
 
+### 2017-09-16 Possible bug related to LTO in LLVM 5.0.0, mac OS Sierra 10.12.6 (16G29)
+
+https://github.com/stanislaw/Examples/tree/20170916-llvm500-possible-lto-bug
+
+https://bugs.llvm.org/show_bug.cgi?id=34645
+
