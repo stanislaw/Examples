@@ -8,7 +8,7 @@
 
 ### 2015-06-15 Xcode Analyzer Bug
 
-Xcode Analyzer produces wrong warning: "Function call argument is an uninitialized value" 
+Xcode Analyzer produces wrong warning: "Function call argument is an uninitialized value"
 
 [Demo project](https://github.com/stanislaw/Reports/tree/20150615-xcode-analyzer-bug)
 
@@ -66,7 +66,7 @@ Original StackOverflow topic: [Xcode Build Phase Input Folder](http://stackoverf
 
 Original StackOverflow topic: [Flex, Bison, C++ all in Xcode](https://github.com/stanislaw/Examples/tree/20161101-flex-cpp-example).
 
-### 2016-11-09 -[NSURLCache currentDiskUsage] doesn't show actual disk usage (or behavior is not documented). 
+### 2016-11-09 -[NSURLCache currentDiskUsage] doesn't show actual disk usage (or behavior is not documented).
 
 [Demo project](https://github.com/stanislaw/Examples/tree/20161109-nsurlcache-weird-behavior-of-currentDiskUsage).
 
@@ -83,4 +83,10 @@ My post: [XCTest: focused tests](http://stanislaw.github.io/2017/02/15/focused-x
 https://github.com/stanislaw/Examples/tree/20170916-llvm500-possible-lto-bug
 
 https://bugs.llvm.org/show_bug.cgi?id=34645
+
+### 2019-02-24 Xcode / C++ / Google Test: blank "hello world" project
+
+[Demo project](https://github.com/stanislaw/Examples/tree/20190224-xcode-cpp-google-test-blank-project)
+
+Russian StackOverflow: [Unit - тесты для C++ и Xcode [требует правки]](https://ru.stackoverflow.com/questions/948179/unit-%d1%82%d0%b5%d1%81%d1%82%d1%8b-%d0%b4%d0%bb%d1%8f-c-%d0%b8-xcode)
 
