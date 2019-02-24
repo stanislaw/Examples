@@ -1,5 +1,27 @@
 # Examples
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [2014-01-14 How to adjust region to fit custom annotation callout that have just appeared?](#2014-01-14-how-to-adjust-region-to-fit-custom-annotation-callout-that-have-just-appeared)
+- [2015-06-15 Xcode Analyzer Bug](#2015-06-15-xcode-analyzer-bug)
+- [2015-06-27 How to animate MKAnnotation on OSX? (Problem solved)](#2015-06-27-how-to-animate-mkannotation-on-osx-problem-solved)
+- [2015-12-20 Raw Terminal: weird behavior of Left Arrow key](#2015-12-20-raw-terminal-weird-behavior-of-left-arrow-key)
+- [2016-02-10 Kingpin: when viewing clusters over the international dateline cluster pins disappear](#2016-02-10-kingpin-when-viewing-clusters-over-the-international-dateline-cluster-pins-disappear)
+- [2016-03-12 How to create scrollable NSTextView programmatically?](#2016-03-12-how-to-create-scrollable-nstextview-programmatically)
+- [2016-03-23 Terminal-like NSTextView](#2016-03-23-terminal-like-nstextview)
+- [2016-03-27 Flex: How to detect partial unfinished token and join its pieces that are obtained from two consequent portions of input?](#2016-03-27-flex-how-to-detect-partial-unfinished-token-and-join-its-pieces-that-are-obtained-from-two-consequent-portions-of-input)
+- [2016-03-28 Reentrant aka thread-safe parser with Flex and Bison](#2016-03-28-reentrant-aka-thread-safe-parser-with-flex-and-bison)
+- [2016-04-09 How to integrate Make-based subproject into Xcode](#2016-04-09-how-to-integrate-make-based-subproject-into-xcode)
+- [2016-11-01 Flex, Bison, C++ all in Xcode](#2016-11-01-flex-bison-c-all-in-xcode)
+- [2016-11-09 -[NSURLCache currentDiskUsage] doesn't show actual disk usage (or behavior is not documented).](#2016-11-09--nsurlcache-currentdiskusage-doesnt-show-actual-disk-usage-or-behavior-is-not-documented)
+- [2017-02-14 XCTest: focused tests](#2017-02-14-xctest-focused-tests)
+- [2017-09-16 Possible bug related to LTO in LLVM 5.0.0, mac OS Sierra 10.12.6 (16G29)](#2017-09-16-possible-bug-related-to-lto-in-llvm-500-mac-os-sierra-10126-16g29)
+- [2019-02-24 Xcode / C++ / Google Test: blank "hello world" project](#2019-02-24-xcode--c--google-test-blank-hello-world-project)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ### 2014-01-14 How to adjust region to fit custom annotation callout that have just appeared?
 
 [Demo project](https://github.com/stanislaw/Examples/tree/20140114-adjust-region-to-fit-annotation-callout)
