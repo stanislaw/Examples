@@ -1,0 +1,1 @@
+void static_lib_func();
