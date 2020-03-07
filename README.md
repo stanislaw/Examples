@@ -19,6 +19,8 @@
 - [2017-02-14 XCTest: focused tests](#2017-02-14-xctest-focused-tests)
 - [2017-09-16 Possible bug related to LTO in LLVM 5.0.0, mac OS Sierra 10.12.6 (16G29)](#2017-09-16-possible-bug-related-to-lto-in-llvm-500-mac-os-sierra-10126-16g29)
 - [2019-02-24 Xcode / C++ / Google Test: blank "hello world" project](#2019-02-24-xcode--c--google-test-blank-hello-world-project)
+- [2020-01-10 Linking a dynamic library that links in symbols from a static library (macOS vs Linux)](#2020-01-10-linking-a-dynamic-library-that-links-in-symbols-from-a-static-library-macos-vs-linux)
+- [2020-01-24 How to share a global variable between a main process and a dynamic library via a static library (macOS)?](#2020-01-24-how-to-share-a-global-variable-between-a-main-process-and-a-dynamic-library-via-a-static-library-macos)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -112,3 +114,14 @@ https://bugs.llvm.org/show_bug.cgi?id=34645
 
 Russian StackOverflow: [Unit - тесты для C++ и Xcode [требует правки]](https://ru.stackoverflow.com/questions/948179/unit-%d1%82%d0%b5%d1%81%d1%82%d1%8b-%d0%b4%d0%bb%d1%8f-c-%d0%b8-xcode)
 
+### 2020-01-10 Linking a dynamic library that links in symbols from a static library (macOS vs Linux)
+
+[Demo project](https://github.com/stanislaw/Examples/tree/20200110-dynamic-static-forward-declaration-mac-vs-linux)
+
+[Linking a dynamic library that links in symbols from a static library: macOS vs Linux](https://stackoverflow.com/questions/59687933/linking-a-dynamic-library-that-links-in-symbols-from-a-static-library-macos-vs/59956317#59956317)
+
+### 2020-01-24 How to share a global variable between a main process and a dynamic library via a static library (macOS)?
+
+[Demo project](https://github.com/stanislaw/Examples/tree/20200124-sharing-global-variable-main-dynamic-via-static)
+
+[How to share a global variable between a main process and a dynamic library via a static library (macOS)](https://stackoverflow.com/questions/59901279/how-to-share-a-global-variable-between-a-main-process-and-a-dynamic-library-via/59956119#59956119)
